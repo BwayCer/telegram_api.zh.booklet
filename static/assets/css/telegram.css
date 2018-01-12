@@ -185,7 +185,7 @@ a:hover {
 
 #dev_page_content > ul:not(.nav) li,
 #dev_page_content ul.bulleted li {
-  background-image: url(../img/bullet.png?2);
+  background-image: url(../mmsetting/bullet.png);
   background-repeat: no-repeat;
   background-position: 0px 8px;
   padding-left: 20px;
@@ -303,7 +303,7 @@ a.anchor i.anchor-icon {
   margin-top: 2px;
   line-height: 14px;
   vertical-align: text-top;
-  background: url(../img/link-icon.png) 0 0 no-repeat;
+  background: url(../mmsetting/link-icon.png) 0 0 no-repeat;
   background-size: 17px 18px;
   opacity: 0;
 
@@ -357,7 +357,7 @@ i.anchor-icon:hover {
 }
 .icon-breadcrumb-divider {
   display: inline-block;
-  background: url(../img/breadcrumb_divider_1x.png) 0 50% no-repeat;
+  background: url(../mmsetting/breadcrumb_divider_1x.png) 0 50% no-repeat;
   width: 5px;
   height: 18px;
   line-height: 18px;
@@ -411,7 +411,7 @@ i.anchor-icon:hover {
 }
 .icon-to-top {
   display: inline-block;
-  background: url(../img/back_to_top_1x.png) 0 50% no-repeat;
+  background: url(../mmsetting/back_to_top_1x.png) 0 50% no-repeat;
   width: 16px;
   height: 7px;
   margin-right: 12px;
@@ -771,7 +771,7 @@ img.tl_main_logo {
   width: 21px;
   height: 17px;
   vertical-align: text-top;
-  background: url(../img/twitter.png) 0 0 no-repeat;
+  background: url(../mmsetting/twitter.png) 0 0 no-repeat;
   opacity: 0.9;
 }
 a:hover .icon-twitter {
@@ -2721,15 +2721,15 @@ i.tl_telegram_share_icon {
     background-size: 18px 26px;
   }
   .icon-twitter {
-    background-image: url(../img/twitter_2x.png);
+    background-image: url(../mmsetting/twitter_2x.png);
     background-size: 21px 17px;
   }
   .icon-breadcrumb-divider {
-    background-image: url(../img/breadcrumb_divider.png);
+    background-image: url(../mmsetting/breadcrumb_divider.png);
     background-size: 5px 10px;
   }
   .icon-to-top {
-    background-image: url(../img/back_to_top.png);
+    background-image: url(../mmsetting/back_to_top.png);
     background-size: 16px 7px;
   }
   .tl_main_award {
@@ -2769,7 +2769,7 @@ i.tl_telegram_share_icon {
   }
 
   #dev_page_content > ul:not(.nav) li {
-    background-image: url(../img/bullet_2x.png?2);
+    background-image: url(../mmsetting/bullet_2x.png);
     background-size: 7px 7px;
   }
 
