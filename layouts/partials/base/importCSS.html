@@ -1,0 +1,26 @@
+{{- $dataAssets := .Site.Data.assets }}
+{{- $defaultPath := $dataAssets.defaultPath.css }}
+
+{{- with $dataAssets.siteShare.css }}
+    {{- $.Scratch.Add "importCSSList" . }}
+{{- end }}
+
+{{- if eq ($.Scratch.Get "assetSection") nil }}
+    {{- if .IsHome }}
+        {{- $.Scratch.Set "assetSection" "home" }}
+    {{- else }}
+        {{- $.Scratch.Set "assetSection" .Section }}
+    {{- end }}
+{{- end }}
+
+{{- $section := $.Scratch.Get "assetSection" }}
+{{- $sectionAsset := index $dataAssets.siteCustom $section }}
+{{- $section := add ($.Scratch.Get "assetSection") "/" }}
+{{- range $sectionAsset.css }}
+    {{- $.Scratch.Add "importCSSList" (slice (add $section .) ) }}
+{{- end }}
+
+{{- range $.Scratch.Get "importCSSList" }}
+    <link rel="stylesheet" href="{{ $defaultPath }}{{ . }}" />
+{{- end -}}
+

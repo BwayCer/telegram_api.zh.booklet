@@ -1,0 +1,38 @@
+---
+defaultPath:
+    favicon      : /assets/favicon/
+    noscriptCSS  : /assets/css/
+    css          : /assets/css/
+    js           : /js/
+
+# 網站圖標
+favicon:
+    ico: s128.ico
+    png: s128.png
+
+# 禁用腳本下的樣式
+noscriptCSS: ~
+
+# 全站共享
+siteShare:
+    css:
+       - bootstrap.min.css
+       - telegram.css
+    js:
+       - jquery.min.js
+       - bootstrap.min.js
+
+
+# 客制化個別網站
+siteCustom:
+
+    home:
+        css: ~
+        js: ~
+
+    tgbook:
+        css: ~
+        js:
+            - main.js
+            - mainAction.js
+...
