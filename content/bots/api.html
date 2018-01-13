@@ -75,9 +75,9 @@ assetSection: ~
     </p>
     <h3>
         <a class="anchor" name="making-requests" href="#making-requests"><i class="anchor-icon"></i></a>
-        發送請求
+        發送 request
         <span data-translation="origin">( Making requests )</span>
-        <span data-translation="zh" hidden>( 發送請求 )</span>
+        <span data-translation="zh" hidden>( 發送 request )</span>
     </h3>
     <p>
         <span data-translation="origin" hidden>
@@ -96,7 +96,7 @@ assetSection: ~
         </span>
         <span data-translation="zh">
             我們支援 <strong>GET</strong> 和 <strong>POST</strong> HTTP 方法。
-            我們對於 Bot API 的請求支援四種傳遞參數的方式：
+            我們對於 Bot API 的 request 支援四種傳遞參數的方式：
         </span>
     </p>
     <ul>
@@ -118,9 +118,9 @@ assetSection: ~
             The response contains a JSON object, which always has a Boolean field ‘ok’ and may have an optional String field ‘description’ with a human-readable description of the result. If ‘ok’ equals true, the request was successful and the result of the query can be found in the ‘result’ field. In case of an unsuccessful request, ‘ok’ equals false and the error is explained in the ‘description’. An Integer ‘error_code’ field is also returned, but its contents are subject to change in the future.
         </span>
         <span data-translation="zh">
-            這個回應包含一個 JSON object，其中總是有一個 Boolean 欄位 ‘ok’ 和可能有一個可選的 String 欄位 ‘description’ 紀錄人類可閱讀的結果描述。
-            如果 ‘ok’ 等於 true，則請求是成功的並且可以在 ‘result’ 欄位中找到其查詢的結果。
-            在非成功請求的情況下，‘ok’ 等於 false 並且錯誤會在 ‘description’ 裡說明。
+            這個 response 包含一個 JSON object，其中總是有一個 Boolean 欄位 ‘ok’ 和可能有一個可選的 String 欄位 ‘description’ 紀錄人類可閱讀的結果描述。
+            如果 ‘ok’ 等於 true，則 request 是成功的並且可以在 ‘result’ 欄位中找到其查詢的結果。
+            在非成功 request 的情況下，‘ok’ 等於 false 並且錯誤會在 ‘description’ 裡說明。
             一個 Integer ‘error_code’ 欄位也會被回傳，但其內容很可能在未來被改變。
         </span>
         Some errors may also have an optional field ‘parameters’ of the type <a href="#responseparameters">ResponseParameters</a>, which can help to automatically handle the error.
@@ -476,7 +476,15 @@ assetSection: ~
         </tbody>
     </table>
     <h4><a class="anchor" name="message" href="#message"><i class="anchor-icon"></i></a>Message</h4>
-    <p>This object represents a message.</p>
+    <p>
+
+        <span data-translation="origin" hidden>
+            This object represents a message.
+        </span>
+        <span data-translation="zh">
+            這個 object 表示一個訊息。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -487,7 +495,14 @@ assetSection: ~
             <tr>
                 <td>message_id</td>
                 <td>Integer</td>
-                <td>Unique message identifier inside this chat</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique message identifier inside this chat
+                    </span>
+                    <span data-translation="zh">
+                        在這個 chat 中唯一的訊息識別碼
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>from</td>
@@ -497,12 +512,28 @@ assetSection: ~
             <tr>
                 <td>date</td>
                 <td>Integer</td>
-                <td>Date the message was sent in Unix time</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Date the message was sent in Unix time
+                    </span>
+                    <span data-translation="zh">
+                        訊息被發送的時間，以 Unix 時間
+                        <sup><a href="#interpreterNotes-001">[註1]</a></sup>
+                        表示
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>chat</td>
                 <td><a href="#chat">Chat</a></td>
-                <td>Conversation the message belongs to</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Conversation the message belongs to
+                    </span>
+                    <span data-translation="zh">
+                        訊息所屬的對話
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>forward_from</td>
@@ -552,12 +583,29 @@ assetSection: ~
             <tr>
                 <td>text</td>
                 <td>String</td>
-                <td><em>Optional</em>. For text messages, the actual UTF-8 text of the message, 0-4096 characters.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. For text messages, the actual UTF-8 text of the message, 0-4096 characters.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        對於 text 訊息中實際的 UTF-8 文本，0-4096 字符。
+                        <sup><a href="#interpreterNotes-002">[註2]</a></sup>
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>entities</td>
                 <td>Array of <a href="#messageentity">MessageEntity</a></td>
-                <td><em>Optional</em>. For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        對於 text 訊息中特別的實體像是 用戶名、網址、bot 命令 ... 等。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>caption_entities</td>
@@ -1419,7 +1467,7 @@ assetSection: ~
             Contains information about why a request was unsuccessful.
         </span>
         <span data-translation="zh">
-            包含關於為何請求不成功的資訊。
+            包含關於為何 request 不成功的資訊。
         </span>
     </p>
     <table class="table">
@@ -1432,12 +1480,37 @@ assetSection: ~
             <tr>
                 <td>migrate_to_chat_id</td>
                 <td>Integer</td>
-                <td><em>Optional</em>. The group has been migrated to a supergroup with the specified identifier. This number may be greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. The group has been migrated to a supergroup with the specified identifier. This number may be greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision float type are safe for storing this identifier.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        此群組已經被遷移到具有指定識別碼的 supergroup。
+                        這組數字可能大於 32 位元
+                        <sup><a href="https://zh.wikipedia.org/wiki/32位元">[註:wiki]</a></sup>
+                        ，某些程式語言可能在解析它上會有困難或無聲的缺陷。
+                        不過它小於 52 位元，所以一個有符號的 64 位
+                        <sup><a href="https://zh.wikipedia.org/wiki/位">[註:wiki]</a></sup>
+                        integer 或 double-precision float 類型對於儲存這個識別碼是安全地。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>retry_after</td>
                 <td>Integer</td>
-                <td><em>Optional</em>. In case of exceeding flood control, the number of seconds left to wait before the request can be repeated</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. In case of exceeding flood control, the number of seconds left to wait before the request can be repeated
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        當超過 flood control
+                        <sup><a href="https://en.wikipedia.org/wiki/Flood_control_(communications)">[註:wiki]</a></sup>
+                        的情況時，
+                        此數字是在 request 能被重複之前需等待的秒數
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -1557,7 +1630,7 @@ assetSection: ~
                 使用 <a href="https://en.wikipedia.org/wiki/Query_string">URL query string</a>
                 或 <em>application/json</em>
                 或 <em>application/x-www-form-urlencoded</em>
-                或 <em>multipart/form-data</em> 在 Bot API 請求中傳遞參數。<br>
+                或 <em>multipart/form-data</em> 在 Bot API request 中的傳遞參數。<br>
                 在成功的調用時，一個包含 result 的 JSON-object 將被回傳。
             </span>
         </p>
@@ -1595,7 +1668,16 @@ assetSection: ~
                 <td>chat_id</td>
                 <td>Integer or String</td>
                 <td>Yes</td>
-                <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)
+                    </span>
+                    <span data-translation="zh">
+                        目標 chat 的唯一識別碼或者目標 channel
+                        <sup><a href="#interpreterNotes-003">[註3]</a></sup>
+                        的用戶名 （在 <code>@channelusername</code> 格式中）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>text</td>
@@ -5606,5 +5688,37 @@ pre-formatted fixed-width code block
         註 000 - 這是範例
     </h6>
     <p>註釋範例，使用類似本文風格。</p>
+    <h6>
+        <a class="anchor" name="interpreterNotes-001" href="#interpreterNotes-001"><i class="anchor-icon"></i></a>
+        註： 001 - Unix 時間
+    </h6>
+    <p>
+        從 <a href="https://zh.wikipedia.org/wiki/世界協調時間">世界協調時間（UTC）</a>
+        1970 年 1 月 1 日 0 時 0 分 0 秒起至現在的總秒數。<br>
+        更多資訊見 <a href="https://zh.wikipedia.org/wiki/UNIX時間">維基百科</a> 。
+    </p>
+    <h6>
+        <a class="anchor" name="interpreterNotes-002" href="#interpreterNotes-002"><i class="anchor-icon"></i></a>
+        註： 002 - 對於 text 訊息中實際的 UTF-8 文本，0-4096 字符。
+    </h6>
+    <p>
+        此處的 text 訊息應該是指 <a href="#sendmessage">sendMessage</a> 中的 text，
+        在 <a href="#message">Message</a> 的 text 欄位中會回傳
+        <a href="#sendmessage">sendMessage</a> 的 text 訊息中實際可見的部分。<br>
+        譬如在 HTML 樣式下發送 <code>&lt;b&gt;bold&lt;/b&gt;</code>
+        的訊息，實際可見的部分只有 “bold”，共佔 4 個字符。<br>
+        被允許送出的字數長度為 0 ~ 4096 個實際可見的字符長度，
+        若超過則請求會失敗，並回傳 “error_code” 欄位等於 400，
+        “description” 欄位為 "Bad Request: message is too long" 的失敗訊息。
+    </p>
+    <h6>
+        <a class="anchor" name="interpreterNotes-003" href="#interpreterNotes-003"><i class="anchor-icon"></i></a>
+        註： 003 - channel
+    </h6>
+    <p>
+        在 <a href="#sendmessage">sendMessage</a> 的 “chat_id” 欄位裡所表示的
+        channel 實測對頻道或者群組皆有效。<br>
+        目前還不清楚是否本文中所有 channel 都有頻道和群組兩種意思。
+    </p>
 </div>
 
