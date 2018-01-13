@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bots on 電報應用程式介面中文譯本</title>
+    <link>https://bwaycer.github.io/telegram_api.zh.booklet/bots/</link>
+    <description>Recent content in Bots on 電報應用程式介面中文譯本</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 25 Mar 2017 21:17:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://bwaycer.github.io/telegram_api.zh.booklet/bots/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Telegram Bot API</title>
+      <link>https://bwaycer.github.io/telegram_api.zh.booklet/bots/api/</link>
+      <pubDate>Sat, 25 Mar 2017 21:17:33 +0800</pubDate>
+      
+      <guid>https://bwaycer.github.io/telegram_api.zh.booklet/bots/api/</guid>
+      <description>Telegram Bots  Telegram Bot API   Telegram Bot API   The Bot API is an HTTP-based interface created for developers keen on building bots for Telegram.
+To learn how to create and set up a bot, please consult our Introduction to Bots and Bot FAQ.  這個 bot API 是以 HTTP 為基礎的介面，為了給熱衷於構建 Telegram bot 的開發者而創建。
+學習如何創建和設定 bot 請參考我們的 bot 介紹 和 bot FAQ.     這篇 bot API 是以中文所翻譯的文章，為了構建舒適的中文圈而貢獻。</description>
+    </item>
+    
+  </channel>
+</rss>
