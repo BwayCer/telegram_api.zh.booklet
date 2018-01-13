@@ -35,4 +35,5 @@ siteCustom:
         js:
             - main.js
             - mainAction.js
+            - translation.js
 ...
