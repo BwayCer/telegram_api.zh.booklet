@@ -40,44 +40,21 @@ assetSection: ~
             ，感謝您 Orz。
         </p>
     </blockquote>
-    <h3><a class="anchor" name="recent-changes" href="#recent-changes"><i class="anchor-icon"></i></a>Recent changes</h3>
-    <h4><a class="anchor" name="november-17-2017" href="#november-17-2017"><i class="anchor-icon"></i></a>November 17, 2017</h4>
-    <p><strong>Bot API 3.5</strong>.</p>
-    <ul>
-        <li>Added the new method <a href="#sendmediagroup">sendMediaGroup</a> and two kinds of <a href="#inputmedia">InputMedia</a> objects to support the new <a href="https://telegram.org/blog/albums-saved-messages">albums feature</a>.</li>
-        <li>Added support for pinning messages in channels. <a href="#pinchatmessage">pinChatMessage</a> and <a href="#unpinchatmessage">unpinChatMessage</a> accept channels.</li>
-        <li>Added the new field <em>provider_data</em> to <a href="#sendinvoice">sendInvoice</a> for sharing information about the invoice with the payment provider.</li>
-    </ul>
-    <h4><a class="anchor" name="october-11-2017" href="#october-11-2017"><i class="anchor-icon"></i></a>October 11, 2017</h4>
-    <p><strong>Bot API 3.4</strong>.</p>
-    <ul>
-        <li>Bots can now send and receive <a href="https://telegram.org/blog/live-locations">Live Locations</a>. Added new field <em>live_period</em> to the <a href="#sendlocation">sendLocation</a> method and the <a href="#editmessagelivelocation">editMessageLiveLocation</a> and <a href="#stopmessagelivelocation">stopMessageLiveLocation</a> methods as well as the necessary objects for inline bots.</li>
-        <li>Bots can use the new <a href="#setchatstickerset">setChatStickerSet</a> and <a href="#deletechatstickerset">deleteChatStickerSet</a> methods to manage <a href="https://telegram.org/blog#stickers-of-the-group">group sticker sets</a>.</li>
-        <li>The <a href="#getchat">getChat</a> request now returns the group&#39;s sticker set for supergroups if available.</li>
-        <li>Bots now receive entities from media captions in the new field <em>caption_entities</em> in <a href="#message">Message</a>.</li>
-    </ul>
-    <h4><a class="anchor" name="august-23-2017" href="#august-23-2017"><i class="anchor-icon"></i></a>August 23, 2017</h4>
-    <p><strong>Bot API 3.3</strong>.</p>
-    <ul>
-        <li>Bots can now mention users via <a href="#formatting-options">inline mentions</a>, without using usernames.</li>
-        <li><a href="#getchat">getChat</a> now also returns pinned messages in supergroups, if present. Added the new field <em>pinned_message</em> to the <a href="#chat">Chat</a> object.</li>
-        <li>Added the new fields <em>author_signature</em> and <em>forward_signature</em> to the <a href="#message">Message</a> object.</li>
-        <li>Added the new field <em>is_bot</em> to the <a href="#user">User</a> object.</li>
-    </ul>
-    <h4><a class="anchor" name="july-21-2017" href="#july-21-2017"><i class="anchor-icon"></i></a>July 21, 2017</h4>
-    <p><strong>Bot API 3.2</strong>. Teach your bot to handle <a href="#stickers">stickers and sticker sets</a>.</p>
-    <ul>
-        <li>Added new methods for working with stickers: <a href="#getstickerset">getStickerSet</a>, <a href="#uploadstickerfile">uploadStickerFile</a>, <a href="#createnewstickerset">createNewStickerSet</a>, <a href="#addstickertoset">addStickerToSet</a>, <a href="#setstickerpositioninset">setStickerPositionInSet</a>, and <a href="#deletestickerfromset">deleteStickerFromSet</a>.</li>
-        <li>Added the fields <em>set_name</em> and <em>mask_position</em> to the <a href="#sticker">Sticker</a> object, plus two new objects, <a href="#stickerset">StickerSet</a>, and <a href="#maskposition">MaskPosition</a>.</li>
-    </ul>
-    <h4><a class="anchor" name="june-30-2017" href="#june-30-2017"><i class="anchor-icon"></i></a>June 30, 2017</h4>
-    <p><strong>Bot API 3.1</strong>. Build your own robotic police force for supergoups with these new methods for admin bots:</p>
-    <ul>
-        <li>Added new methods <a href="#restrictchatmember">restrictChatMember</a> and <a href="#promotechatmember">promoteChatMember</a> to manage users and admins, added new parameter <em>until_date</em> to <a href="#kickchatmember">kickChatMember</a> for temporary bans.</li>
-        <li>Added new methods <a href="#exportchatinvitelink">exportChatInviteLink</a>, <a href="#setchatphoto">setChatPhoto</a>, <a href="#deletechatphoto">deleteChatPhoto</a>, <a href="#setchattitle">setChatTitle</a>, <a href="#setchatdescription">setChatDescription</a>, <a href="#pinchatmessage">pinChatMessage</a> and <a href="#unpinchatmessage">unpinChatMessage</a> to manage groups and channels.</li>
-        <li>Added the new fields <em>photo</em>, <em>description</em> and <em>invite_link</em> to the <a href="#chat">Chat</a> object.</li>
-        <li>Added the new fields <em>until_date</em>, <em>can_be_edited</em>, <em>can_change_info</em>, <em>can_post_messages</em>, <em>can_edit_messages</em>, <em>can_delete_messages</em>, <em>can_invite_users</em>, <em>can_restrict_members</em>, <em>can_pin_messages</em>, <em>can_promote_members</em>, <em>can_send_messages</em>, <em>can_send_media_messages</em>, <em>can_send_other_messages</em> and <em>can_add_web_page_previews</em> to the <a href="#chatmember">ChatMember</a> object.</li>
-    </ul>
+    <h3>
+        <a class="anchor" name="recent-changes" href="#recent-changes"><i class="anchor-icon"></i></a>
+        近期更新
+        <span data-translation="origin">( Recent changes )</span>
+        <span data-translation="zh" hidden>( 近期更新 )</span>
+    </h3>
+    <p>
+        <strong>
+            <a href="https://core.telegram.org/bots/api-changelog">
+                <span data-translation="origin" hidden>See earlier changes</span>
+                <span data-translation="zh">查看過往的更改</span>
+                »
+            </a>
+        </strong>
+    </p>
     <p><strong><a href="/bots/api-changelog">See earlier changes »</a></strong></p>
     <h3><a class="anchor" name="authorizing-your-bot" href="#authorizing-your-bot"><i class="anchor-icon"></i></a>Authorizing your bot</h3>
     <p>Each bot is given a unique authentication token <a href="/bots#botfather">when it is created</a>. The token looks something like <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>, but we&#39;ll use simply <strong>&lt;token&gt;</strong> in this document instead. You can learn about obtaining tokens and generating new ones in <a href="https://core.telegram.org/bots#botfather">this document</a>.</p>
