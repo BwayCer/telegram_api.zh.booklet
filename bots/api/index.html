@@ -310,34 +310,124 @@ To learn how to create…">
                 <td>url</td>
                 <td>String</td>
                 <td>Yes</td>
-                <td>HTTPS url to send updates to. Use an empty string to remove webhook integration</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        HTTPS url to send updates to. Use an empty string to remove webhook integration
+                    </span>
+                    <span data-translation="zh">
+                        發送更新到達 HTTPS 網址。 使用空 string 來移除 webhook integration
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>certificate</td>
                 <td><a href="#inputfile">InputFile</a></td>
                 <td>Optional</td>
-                <td>Upload your public key certificate so that the root certificate in use can be checked. See our <a href="../../bots/self-signed">self-signed guide</a> for details.</td>
+                <td>
+                    Upload your public key certificate so that the root certificate in use can be checked. See our <a href="https://core.telegram.org/bots/self-signed">self-signed guide</a> for details.
+                </td>
             </tr>
             <tr>
                 <td>max_connections</td>
                 <td>Integer</td>
                 <td>Optional</td>
-                <td>Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Defaults to <em>40</em>. Use lower values to limit the load on your bot‘s server, and higher values to increase your bot’s throughput.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100. Defaults to <em>40</em>. Use lower values to limit the load on your bot‘s server, and higher values to increase your bot’s throughput.
+                    </span>
+                    <span data-translation="zh">
+                        HTTPS 同時連限至用於投遞更新的 webhook 的最大允許數量， 1-100。
+                        預設值為 <em>40</em>。
+                        使用較低的值來限制 bot 服務器的負載，
+                        使用較高的值來增加 bot 的處理能力。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>allowed_updates</td>
                 <td>Array of String</td>
                 <td>Optional</td>
-                <td>List the types of updates you want your bot to receive. For example, specify [“message”, “edited_channel_post”, “callback_query”] to only receive updates of these types. See <a href="#update">Update</a> for a complete list of available update types. Specify an empty list to receive all updates regardless of type (default). If not specified, the previous setting will be used.<br><br>Please note that this parameter doesn&#39;t affect updates created before the call to the setWebhook, so unwanted updates may be received for a short period of time.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        List the types of updates you want your bot to receive. For example, specify [“message”, “edited_channel_post”, “callback_query”] to only receive updates of these types. See <a href="#update">Update</a> for a complete list of available update types. Specify an empty list to receive all updates regardless of type (default). If not specified, the previous setting will be used.
+                    </span>
+                    <span data-translation="zh">
+                        列出你想要 bot 接收的更新類型。
+                        例如， 指定 [“message”, “edited_channel_post”, “callback_query”]
+                        就只接收這些類型的更新。
+                        查看 <a href="#update">Update</a> 有關於可用更新類型的完整列表。
+                        指定一個空列表來接收所有更新類型（默認）。
+                        如果未指定， 則將使用之前的設置。
+                    </span>
+                    <br><br>
+                    <span data-translation="origin" hidden>
+                        Please note that this parameter doesn&#39;t affect updates created before the call to the setWebhook, so unwanted updates may be received for a short period of time.
+                    </span>
+                    <span data-translation="zh">
+                        請注意此參數不會影響在調用 setWebhook 之前被創建的更新，
+                        所以可能會在短時間內收到不想要的更新。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <blockquote>
-        <p><strong>Notes</strong><br><strong>1.</strong> You will not be able to receive updates using <a href="#getupdates">getUpdates</a> for as long as an outgoing webhook is set up.<br><strong>2.</strong> To use a self-signed certificate, you need to upload your <a href="../../bots/self-signed">public key certificate</a> using <em>certificate</em> parameter. Please upload as InputFile, sending a String will not work.<br><strong>3.</strong> Ports currently supported <em>for Webhooks</em>: <strong>443, 80, 88, 8443</strong>.</p>
-        <p><strong>NEW!</strong> If you&#39;re having any trouble setting up webhooks, please check out this <a href="../../bots/webhooks">amazing guide to Webhooks</a>.</p>
+        <p>
+            <strong>Notes</strong><br>
+            <strong>1.</strong>
+            <span data-translation="origin" hidden>
+                You will not be able to receive updates using <a href="#getupdates">getUpdates</a> for as long as an outgoing webhook is set up.
+            </span>
+            <span data-translation="zh">
+                只要設置了傳出的 webhook， 您將不能使用 getUpdates 去接收更新。
+            </span>
+            <br>
+            <strong>2.</strong>
+            <span data-translation="origin" hidden>
+                To use a self-signed certificate, you need to upload your
+                <a href="https://core.telegram.org/bots/self-signed">public key certificate</a>
+                using <em>certificate</em> parameter. Please upload as InputFile, sending a String will not work.
+            </span>
+            <span data-translation="zh">
+                您需要使用 <em>certificate</em> 參數上傳
+                <a href="https://core.telegram.org/bots/self-signed">公鑰證書</a> 。
+                請以 InputFile 上傳， 發送一個 String 將無法工作。
+            </span>
+            <br>
+            <strong>3.</strong>
+            <span data-translation="origin" hidden>
+                Ports currently supported <em>for Webhooks</em>: <strong>443, 80, 88, 8443</strong>.
+            </span>
+            <span data-translation="zh">
+                <em>Webhooks</em> 當前支持的埠口： <strong>443, 80, 88, 8443</strong>.
+            </span>
+        </p>
+        <p>
+            <strong>NEW!</strong>
+            <span data-translation="origin" hidden>
+                If you&#39;re having any trouble setting up webhooks, please check out this
+                <a href="https://core.telegram.org/bots/webhooks">amazing guide to Webhooks</a>.
+            </span>
+            <span data-translation="zh">
+                如果您在設置 webhooks 有遇到任何困難， 請查看這個
+                <a href="https://core.telegram.org/bots/webhooks">令人驚嘆的 Webhooks 指南</a> 。
+            </span>
+        </p>
     </blockquote>
     <h4><a class="anchor" name="deletewebhook" href="#deletewebhook"><i class="anchor-icon"></i></a>deleteWebhook</h4>
-    <p>Use this method to remove webhook integration if you decide to switch back to <a href="#getupdates">getUpdates</a>. Returns <em>True</em> on success. Requires no parameters.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Use this method to remove webhook integration if you decide to switch back to
+            <a href="#getupdates">getUpdates</a>.
+            Returns <em>True</em> on success. Requires no parameters.
+        </span>
+        <span data-translation="zh">
+            如果您決定切換回 <a href="#getupdates">getUpdates</a>  ，
+            使用此方法移除 webhook integration。
+            成功時傳回 <em>True</em>。
+            不需要參數。
+        </span>
+    </p>
     <h4><a class="anchor" name="getwebhookinfo" href="#getwebhookinfo"><i class="anchor-icon"></i></a>getWebhookInfo</h4>
     <p>
         <span data-translation="origin" hidden>
@@ -1719,7 +1809,7 @@ To learn how to create…">
                     <span data-translation="zh">
                         目標 chat 的唯一識別碼或者目標 channel
                         <sup><a href="#interpreterNotes-003">[註3]</a></sup>
-                        的用戶名 （在 <code>@channelusername</code> 格式中）
+                        的用戶名 （以 <code>@channelusername</code> 格式）
                     </span>
                 </td>
             </tr>
@@ -1803,7 +1893,15 @@ pre-formatted fixed-width code block
         <li>The API currently supports only the following named HTML entities: <code>&amp;lt;</code>, <code>&amp;gt;</code>, <code>&amp;amp;</code> and <code>&amp;quot;</code>.</li>
     </ul>
     <h4><a class="anchor" name="forwardmessage" href="#forwardmessage"><i class="anchor-icon"></i></a>forwardMessage</h4>
-    <p>Use this method to forward messages of any kind. On success, the sent <a href="#message">Message</a> is returned.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Use this method to forward messages of any kind. On success, the sent <a href="#message">Message</a> is returned.
+        </span>
+        <span data-translation="zh">
+            使用此方法轉發任何種類的訊息。
+            成功時，發送的 <a href="#message">Message</a> 會被回傳。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1816,25 +1914,59 @@ pre-formatted fixed-width code block
                 <td>chat_id</td>
                 <td>Integer or String</td>
                 <td>Yes</td>
-                <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)
+                    </span>
+                    <span data-translation="zh">
+                        目標 chat 的唯一識別碼或者目標 channel
+                        <sup><a href="#interpreterNotes-003">[註3]</a></sup>
+                        的用戶名 （以 <code>@channelusername</code> 格式中）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>from_chat_id</td>
                 <td>Integer or String</td>
                 <td>Yes</td>
-                <td>Unique identifier for the chat where the original message was sent (or channel username in the format <code>@channelusername</code>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique identifier for the chat where the original message was sent (or channel username in the format <code>@channelusername</code>)
+                    </span>
+                    <span data-translation="zh">
+                        原始訊息被寄送到的 chat 的唯一識別碼
+                        （或者以 <code>@channelusername</code> 格式的 channel
+                        <sup><a href="#interpreterNotes-003">[註3]</a></sup>
+                        的用戶名）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+                    </span>
+                    <span data-translation="zh">
+                        寄送 <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 的訊息。
+                        用戶將收到無聲的通知。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>message_id</td>
                 <td>Integer</td>
                 <td>Yes</td>
-                <td>Message identifier in the chat specified in <em>from_chat_id</em></td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Message identifier in the chat specified in <em>from_chat_id</em>
+                    </span>
+                    <span data-translation="zh">
+                        在 <em>from_chat_id</em> 的 chat 中被指定的訊息識別碼
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -5841,5 +5973,15 @@ pre-formatted fixed-width code block
     <script src="../../js/tgbook/translation.js"></script>
 
         
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', "UA-93985618-1", 'auto');
+        ga('send', 'pageview');
+    </script>
+
     </body>
 </html>
