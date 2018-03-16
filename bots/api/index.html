@@ -611,7 +611,6 @@ To learn how to create…">
     </table>
     <h4><a class="anchor" name="message" href="#message"><i class="anchor-icon"></i></a>Message</h4>
     <p>
-
         <span data-translation="origin" hidden>
             This object represents a message.
         </span>
@@ -1723,26 +1722,144 @@ To learn how to create…">
     </table>
     <h4><a class="anchor" name="inputfile" href="#inputfile"><i class="anchor-icon"></i></a>InputFile</h4>
     <p>This object represents the contents of a file to be uploaded. Must be posted using multipart/form-data in the usual way that files are uploaded via the browser.</p>
-    <h4><a class="anchor" name="sending-files" href="#sending-files"><i class="anchor-icon"></i></a>Sending files</h4>
-    <p> There are three ways to send files (photos, stickers, audio, media, etc.):</p>
+    <h4>
+        <a class="anchor" name="sending-files" href="#sending-files"><i class="anchor-icon"></i></a>
+        發送文件
+        <span data-translation="origin">( Sending files )</span>
+        <span data-translation="zh" hidden>( 發送文件 )</span>
+    </h4>
+    <p>
+        <span data-translation="origin" hidden>
+            There are three ways to send files (photos, stickers, audio, media, etc.):
+        </span>
+        <span data-translation="zh">
+            有三種方式發送文件（照片、貼紙、音頻、媒體 ... 等）：
+        </span>
+    </p>
     <ol>
-        <li>If the file is already stored somewhere on the Telegram servers, you don&#39;t need to reupload it: each file object has a <strong>file_id</strong> field, simply pass this <strong>file_id</strong> as a parameter instead of uploading. There are <strong>no limits</strong> for files sent this way.</li>
-        <li>Provide Telegram with an HTTP URL for the file to be sent. Telegram will download and send the file. 5 MB max size for photos and 20 MB max for other types of content.</li>
-        <li>Post the file using multipart/form-data in the usual way that files are uploaded via the browser. 10 MB max size for photos, 50 MB for other files.</li>
+        <li>
+            <span data-translation="origin" hidden>
+                If the file is already stored somewhere on the Telegram servers, you don&#39;t need to reupload it: each file object has a <strong>file_id</strong> field, simply pass this <strong>file_id</strong> as a parameter instead of uploading. There are <strong>no limits</strong> for files sent this way.
+            </span>
+            <span data-translation="zh">
+                如果文件已存儲在 Telegram 服務器的某處，
+                則不需要重新上傳它：
+                每個 file object 都有一個 <strong>file_id</strong> 欄位，
+                只需將將 <strong>file_id</strong> 作為參數傳遞而不是上傳。
+                對以此方式發送的文件沒有限制。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                Provide Telegram with an HTTP URL for the file to be sent. Telegram will download and send the file. 5 MB max size for photos and 20 MB max for other types of content.
+            </span>
+            <span data-translation="zh">
+                對要被發送的文件以 HTTP 網址提供給 Telegram。
+                Telegram 將下載並發送文件。
+                圖片最大 5 MB，其他的內容類型最大 20 MB。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                Post the file using multipart/form-data in the usual way that files are uploaded via the browser. 10 MB max size for photos, 50 MB for other files.
+            </span>
+            <span data-translation="zh">
+                使用 multipart/form-data 去 Post 文件，
+                是透過瀏覽器上傳文件的常見方式。
+                圖片最大 10 MB，其他文件最大 50 MB。
+            </span>
+        </li>
     </ol>
-    <p><strong>Sending by file_id</strong></p>
+    <p>
+        <span data-translation="origin" hidden>
+            <strong>Sending by file_id</strong>
+        </span>
+        <span data-translation="zh">
+            <strong>以 file_id 發送</strong>
+        </span>
+    </p>
     <ul>
-        <li>It is not possible to change the file type when resending by <strong>file_id</strong>. I.e. a <a href="#video">video</a> can&#39;t be <a href="#sendphoto">sent as a photo</a>, a <a href="#photosize">photo</a> can&#39;t be <a href="#senddocument">sent as a document</a>, etc.</li>
-        <li>It is not possible to resend thumbnails.</li>
-        <li>Resending a photo by <strong>file_id</strong> will send all of its <a href="#photosize">sizes</a>. </li>
-        <li><strong>file_id</strong> is unique for each individual bot and can&#39;t be transferred from one bot to another.</li>
+        <li>
+            <span data-translation="origin" hidden>
+                It is not possible to change the file type when resending by <strong>file_id</strong>. I.e. a <a href="#video">video</a> can&#39;t be <a href="#sendphoto">sent as a photo</a>, a <a href="#photosize">photo</a> can&#39;t be <a href="#senddocument">sent as a document</a>, etc.
+            </span>
+            <span data-translation="zh">
+                當以 <strong>file_id</strong> 重新發送時是無法更改文件類型。
+                即 <a href="#video">video</a> 不能作為 <a href="#sendphoto">photo 發送</a>，
+                <a href="#photosize">photo</a> 不能作為 <a href="#senddocument"> document 發送</a> ... 等。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                It is not possible to resend thumbnails.
+            </span>
+            <span data-translation="zh">
+                無法重新發送縮圖。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                Resending a photo by <strong>file_id</strong> will send all of its <a href="#photosize">sizes</a>.
+            </span>
+            <span data-translation="zh">
+                以 <strong>file_id</strong> 重新發送圖片 will send all of its <a href="#photosize">sizes</a>.
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                <strong>file_id</strong> is unique for each individual bot and can&#39;t be transferred from one bot to another.
+            </span>
+            <span data-translation="zh">
+                <strong>file_id</strong> 對於每個個別的 bot 是不相同的，
+                不能從一個 bot 轉移到另一個 bot。
+            </span>
+        </li>
     </ul>
-    <p><strong>Sending by URL</strong></p>
+    <p>
+        <span data-translation="origin" hidden>
+            <strong>Sending by URL</strong>
+        </span>
+        <span data-translation="zh">
+            <strong>以 URL 發送</strong>
+        </span>
+    </p>
     <ul>
-        <li>When sending by URL the target file must have the correct MIME type (e.g., audio/mpeg for <a href="#sendaudio">sendAudio</a>, etc.).</li>
-        <li>In <a href="#senddocument">sendDocument</a>, sending by URL will currently only work for <strong>gif</strong>, <strong>pdf</strong> and <strong>zip</strong> files. </li>
-        <li>To use <a href="#sendvoice">sendVoice</a>, the file must have the type audio/ogg and be no more than 1MB in size. 1–20MB voice notes will be sent as files.</li>
-        <li>Other configurations may work but we can&#39;t guarantee that they will.</li>
+        <li>
+            <span data-translation="origin" hidden>
+                When sending by URL the target file must have the correct MIME type (e.g., audio/mpeg for <a href="#sendaudio">sendAudio</a>, etc.).
+            </span>
+            <span data-translation="zh">
+                當以 URL 發送時， 目標文件必須具有正確的 MIME 類型
+                （例如，用於 <a href="#sendaudio">sendAudio</a> 的 audio/mpeg ... 等）。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                In <a href="#senddocument">sendDocument</a>, sending by URL will currently only work for <strong>gif</strong>, <strong>pdf</strong> and <strong>zip</strong> files.
+            </span>
+            <span data-translation="zh">
+                在 <a href="#senddocument">sendDocument</a> 中，
+                以 URL 發送僅適用於 <strong>gif</strong>、<strong>pdf</strong> 換 <strong>zip</strong> 文件。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                To use <a href="#sendvoice">sendVoice</a>, the file must have the type audio/ogg and be no more than 1MB in size. 1–20MB voice notes will be sent as files.
+            </span>
+            <span data-translation="zh">
+                要使用 <a href="#sendvoice">sendVoice</a> 的話，
+                該文件必須是 audio/ogg 類型並且大小不超過 1MB。
+                1–20MB 的 voice notes 將作為文件發送。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                Other configurations may work but we can&#39;t guarantee that they will.
+            </span>
+            <span data-translation="zh">
+                其他配置可能能工作， 但我們不能保證將來也是。
+            </span>
+        </li>
     </ul>
     <h4><a class="anchor" name="inline-mode-objects" href="#inline-mode-objects"><i class="anchor-icon"></i></a>Inline mode objects</h4>
     <p>Objects and methods used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.</p>
@@ -1971,7 +2088,15 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <h4><a class="anchor" name="sendphoto" href="#sendphoto"><i class="anchor-icon"></i></a>sendPhoto</h4>
-    <p>Use this method to send photos. On success, the sent <a href="#message">Message</a> is returned.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Use this method to send photos. On success, the sent <a href="#message">Message</a> is returned.
+        </span>
+        <span data-translation="zh">
+            使用這個方法去發送圖片。
+            成功時會回傳 <a href="#message">Message</a> 。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1984,25 +2109,61 @@ pre-formatted fixed-width code block
                 <td>chat_id</td>
                 <td>Integer or String</td>
                 <td>Yes</td>
-                <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)
+                    </span>
+                    <span data-translation="zh">
+                        目標 chat 的唯一識別碼或者目標 channel
+                        <sup><a href="#interpreterNotes-003">[註3]</a></sup>
+                        的用戶名 （以 <code>@channelusername</code> 格式中）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>photo</td>
                 <td><a href="#inputfile">InputFile</a> or String</td>
                 <td>Yes</td>
-                <td>Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a photo from the Internet, or upload a new photo using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>
+                    </span>
+                    <span data-translation="zh">
+                        被發送的圖片。
+                        傳遞 String 的 file_id 去發送已存在於 Telegram 服務器上的圖片（推薦），
+                        傳遞 String 的 HTTP 網址 讓 Telegram 從 Internet 上取得的圖片，
+                        或者使用 multipart/form-data 上傳新的圖片。
+                        <a href="#sending-files">有關發送 file 的更多信息 »</a>
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>caption</td>
                 <td>String</td>
                 <td>Optional</td>
-                <td>Photo caption (may also be used when resending photos by <em>file_id</em>), 0-200 characters</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Photo caption (may also be used when resending photos by <em>file_id</em>), 0-200 characters
+                    </span>
+                    <span data-translation="zh">
+                        圖片標題（也能使用在以 <em>file_id</em> 發送圖片時），
+                        0-200 字符
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+                    </span>
+                    <span data-translation="zh">
+                        寄送 <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 的訊息。
+                        用戶將收到無聲的通知。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_to_message_id</td>
