@@ -1909,19 +1909,41 @@ assetSection: ~
                 <td>disable_web_page_preview</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Disables link previews for links in this message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Disables link previews for links in this message
+                    </span>
+                    <span data-translation="zh">
+                        對於訊息中的連結禁用連結預覽
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+                    </span>
+                    <span data-translation="zh">
+                        寄送 <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 的訊息。
+                        用戶將收到無聲的通知。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_to_message_id</td>
                 <td>Integer</td>
                 <td>Optional</td>
-                <td>If the message is a reply, ID of the original message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        If the message is a reply, ID of the original message
+                    </span>
+                    <span data-translation="zh">
+                        如果這是一則回覆訊息，則填上原始訊息的識別碼
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_markup</td>
@@ -2102,7 +2124,7 @@ pre-formatted fixed-width code block
                         Photo caption (may also be used when resending photos by <em>file_id</em>), 0-200 characters
                     </span>
                     <span data-translation="zh">
-                        圖片標題（也能使用在以 <em>file_id</em> 發送圖片時），
+                        圖片說明（也能使用在以 <em>file_id</em> 發送圖片時），
                         0-200 字符
                     </span>
                 </td>
@@ -2125,7 +2147,14 @@ pre-formatted fixed-width code block
                 <td>reply_to_message_id</td>
                 <td>Integer</td>
                 <td>Optional</td>
-                <td>If the message is a reply, ID of the original message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        If the message is a reply, ID of the original message
+                    </span>
+                    <span data-translation="zh">
+                        如果這是一則回覆訊息，則填上原始訊息的識別碼
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_markup</td>
@@ -2136,8 +2165,25 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <h4><a class="anchor" name="sendaudio" href="#sendaudio"><i class="anchor-icon"></i></a>sendAudio</h4>
-    <p>Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent <a href="#message">Message</a> is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.</p>
-    <p>For sending voice messages, use the <a href="#sendvoice">sendVoice</a> method instead.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent <a href="#message">Message</a> is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
+        </span>
+        <span data-translation="zh">
+            如果你希望 Telegram 用戶在音樂播放器中顯示 audio 文件，請使用此方法發送它們。
+            你的 audio 必須為 .mp3 格式。
+            成功時回傳 <a href="#message">Message</a>。
+            目前可以發送最大 50 MB 的 audio 文件，這個限制在未來可能會改變。
+        </span>
+    </p>
+    <p>
+        <span data-translation="origin" hidden>
+            For sending voice messages, use the <a href="#sendvoice">sendVoice</a> method instead.
+        </span>
+        <span data-translation="zh">
+            要發送 voice messages，請使用 <a href="#sendvoice">sendVoice</a> 方法代替。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -2150,19 +2196,46 @@ pre-formatted fixed-width code block
                 <td>chat_id</td>
                 <td>Integer or String</td>
                 <td>Yes</td>
-                <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)
+                    </span>
+                    <span data-translation="zh">
+                        目標 chat 的唯一識別碼或者目標 channel
+                        <sup><a href="#interpreterNotes-003">[註3]</a></sup>
+                        的用戶名 （以 <code>@channelusername</code> 格式）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>audio</td>
                 <td><a href="#inputfile">InputFile</a> or String</td>
                 <td>Yes</td>
-                <td>Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>
+                    </span>
+                    <span data-translation="zh">
+                        被發送的 audio 文件。
+                        傳遞 String 的 file_id 去發送已存在於 Telegram 服務器上的 audio 文件（推薦），
+                        傳遞 String 的 HTTP 網址讓 Telegram 從 Internet 上取得的 audio 文件，
+                        或者使用 multipart/form-data 上傳新的 audio 文件。
+                        <a href="#sending-files">有關發送 file 的更多信息 »</a>
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>caption</td>
                 <td>String</td>
                 <td>Optional</td>
-                <td>Audio caption, 0-200 characters</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Audio caption, 0-200 characters
+                    </span>
+                    <span data-translation="zh">
+                        Audio 說明， 0-200 字符
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>duration</td>
@@ -2186,13 +2259,28 @@ pre-formatted fixed-width code block
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+                    </span>
+                    <span data-translation="zh">
+                        寄送 <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 的訊息。
+                        用戶將收到無聲的通知。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_to_message_id</td>
                 <td>Integer</td>
                 <td>Optional</td>
-                <td>If the message is a reply, ID of the original message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        If the message is a reply, ID of the original message
+                    </span>
+                    <span data-translation="zh">
+                        如果這是一則回覆訊息，則填上原始訊息的識別碼
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_markup</td>
@@ -2317,7 +2405,19 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <h4><a class="anchor" name="sendvoice" href="#sendvoice"><i class="anchor-icon"></i></a>sendVoice</h4>
-    <p>Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as <a href="#audio">Audio</a> or <a href="#document">Document</a>). On success, the sent <a href="#message">Message</a> is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as <a href="#audio">Audio</a> or <a href="#document">Document</a>). On success, the sent <a href="#message">Message</a> is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.
+        </span>
+        <span data-translation="zh">
+            如果你希望 Telegram 用戶將 audio 文件顯示為可播放的 voice message，請使用此方法發送它們。
+            為此，你的 audio 必須以 OPUS 編碼為 .ogg 文件（其他格式可能被作為
+            <a href="#audio">Audio</a>
+            或 <a href="#document">Document</a> 發送）。
+            成功時會回傳 <a href="#message">Message</a>。
+            目前可以發送最大 50 MB 的 audio 文件，這個限制在未來可能會改變。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -2330,19 +2430,46 @@ pre-formatted fixed-width code block
                 <td>chat_id</td>
                 <td>Integer or String</td>
                 <td>Yes</td>
-                <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)
+                    </span>
+                    <span data-translation="zh">
+                        目標 chat 的唯一識別碼或者目標 channel
+                        <sup><a href="#interpreterNotes-003">[註3]</a></sup>
+                        的用戶名 （以 <code>@channelusername</code> 格式）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>voice</td>
                 <td><a href="#inputfile">InputFile</a> or String</td>
                 <td>Yes</td>
-                <td>Audio file to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>
+                    </span>
+                    <span data-translation="zh">
+                        被發送的 audio 文件。
+                        傳遞 String 的 file_id 去發送已存在於 Telegram 服務器上的 audio 文件（推薦），
+                        傳遞 String 的 HTTP 網址讓 Telegram 從 Internet 上取得的 audio 文件，
+                        或者使用 multipart/form-data 上傳新的 audio 文件。
+                        <a href="#sending-files">有關發送 file 的更多信息 »</a>
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>caption</td>
                 <td>String</td>
                 <td>Optional</td>
-                <td>Voice message caption, 0-200 characters</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Voice message caption, 0-200 characters
+                    </span>
+                    <span data-translation="zh">
+                        Voice message 說明， 0-200 字符
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>duration</td>
@@ -2354,13 +2481,28 @@ pre-formatted fixed-width code block
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+                    </span>
+                    <span data-translation="zh">
+                        寄送 <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 的訊息。
+                        用戶將收到無聲的通知。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_to_message_id</td>
                 <td>Integer</td>
                 <td>Optional</td>
-                <td>If the message is a reply, ID of the original message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        If the message is a reply, ID of the original message
+                    </span>
+                    <span data-translation="zh">
+                        如果這是一則回覆訊息，則填上原始訊息的識別碼
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_markup</td>
