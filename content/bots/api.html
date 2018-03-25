@@ -312,7 +312,7 @@ assetSection: ~
                         例如， 指定 [“message”, “edited_channel_post”, “callback_query”]
                         就只接收這些類型的更新。
                         查看 <a href="#update">Update</a> 有關於可用更新類型的完整列表。
-                        指定一個空列表來接收所有更新類型（默認）。
+                        指定一個空列表來接收所有更新類型（預設）。
                         如果未指定， 則將使用之前的設置。
                     </span>
                     <br><br>
@@ -1895,7 +1895,7 @@ assetSection: ~
                         Text of the message to be sent
                     </span>
                     <span data-translation="zh">
-                        被送出的訊息文本
+                        被發送的訊息文本
                     </span>
                 </td>
             </tr>
@@ -2170,7 +2170,7 @@ pre-formatted fixed-width code block
             Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent <a href="#message">Message</a> is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
         </span>
         <span data-translation="zh">
-            如果你希望 Telegram 用戶在音樂播放器中顯示 audio 文件，請使用此方法發送它們。
+            如果你希望 Telegram 客戶端在音樂播放器中顯示 audio 文件，請使用此方法發送它們。
             你的 audio 必須為 .mp3 格式。
             成功時回傳 <a href="#message">Message</a>。
             目前可以發送最大 50 MB 的 audio 文件，這個限制在未來可能會改變。
@@ -2249,7 +2249,7 @@ pre-formatted fixed-width code block
                 <td>Optional</td>
                 <td>
                     Performer
-                    <sup><a href="#interpreterNotes-004">[註4]</a></sup>
+                    <sup><a href="#interpreterNotes-005">[註5]</a></sup>
                 </td>
             </tr>
             <tr>
@@ -2258,7 +2258,7 @@ pre-formatted fixed-width code block
                 <td>Optional</td>
                 <td>
                     Track name
-                    <sup><a href="#interpreterNotes-004">[註4]</a></sup>
+                    <sup><a href="#interpreterNotes-005">[註5]</a></sup>
                 </td>
             </tr>
             <tr>
@@ -2416,7 +2416,7 @@ pre-formatted fixed-width code block
             Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as <a href="#audio">Audio</a> or <a href="#document">Document</a>). On success, the sent <a href="#message">Message</a> is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.
         </span>
         <span data-translation="zh">
-            如果你希望 Telegram 用戶將 audio 文件顯示為可播放的 voice message，請使用此方法發送它們。
+            如果你希望 Telegram 客戶端將 audio 文件顯示為可播放的 voice message，請使用此方法發送它們。
             為此，你的 audio 必須以 OPUS 編碼為 .ogg 文件（其他格式可能被作為
             <a href="#audio">Audio</a>
             或 <a href="#document">Document</a> 發送）。
@@ -6148,7 +6148,7 @@ pre-formatted fixed-width code block
         <a href="#sendmessage">sendMessage</a> 的 text 訊息中實際可見的部分。<br>
         譬如在 HTML 樣式下發送 <code>&lt;b&gt;bold&lt;/b&gt;</code>
         的訊息，實際可見的部分只有 “bold”，共佔 4 個字符。<br>
-        被允許送出的字數長度為 0 ~ 4096 個實際可見的字符長度，
+        被允許發送的字數長度為 0 ~ 4096 個實際可見的字符長度，
         若超過則請求會失敗，並回傳 “error_code” 欄位等於 400，
         “description” 欄位為 "Bad Request: message is too long" 的失敗訊息。
     </p>
@@ -6162,8 +6162,8 @@ pre-formatted fixed-width code block
         目前還不清楚是否本文中所有 channel 都有頻道和群組兩種意思。
     </p>
     <h6>
-        <a class="anchor" name="interpreterNotes-004" href="#interpreterNotes-004"><i class="anchor-icon"></i></a>
-        註： 004 - performer & title
+        <a class="anchor" name="interpreterNotes-005" href="#interpreterNotes-005"><i class="anchor-icon"></i></a>
+        註： 005 - performer 和 title
     </h6>
     <p>
         以字面意思理解 “performer”（演出者）、 “title”（標題）
