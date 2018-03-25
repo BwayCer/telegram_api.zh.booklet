@@ -148,9 +148,31 @@ assetSection: ~
     <blockquote>
         <p>Please see our <a href="/bots/faq#how-can-i-make-requests-in-response-to-updates">FAQ</a> for examples.</p>
     </blockquote>
-    <h3><a class="anchor" name="getting-updates" href="#getting-updates"><i class="anchor-icon"></i></a>Getting updates</h3>
-    <p>There are two mutually exclusive ways of receiving updates for your bot — the <a href="#getupdates">getUpdates</a> method on one hand and <a href="#setwebhook">Webhooks</a> on the other. Incoming updates are stored on the server until the bot receives them either way, but they will not be kept longer than 24 hours.</p>
-    <p>Regardless of which option you choose, you will receive JSON-serialized <a href="#update">Update</a> objects as a result.</p>
+    <h3>
+        <a class="anchor" name="getting-updates" href="#getting-updates"><i class="anchor-icon"></i></a>
+        取得更新
+        <span data-translation="origin">( Getting updates )</span>
+        <span data-translation="zh" hidden>( 取得更新 )</span>
+    </h3>
+    <p>
+        <span data-translation="origin" hidden>
+            There are two mutually exclusive ways of receiving updates for your bot — the <a href="#getupdates">getUpdates</a> method on one hand and <a href="#setwebhook">Webhooks</a> on the other. Incoming updates are stored on the server until the bot receives them either way, but they will not be kept longer than 24 hours.
+        </span>
+        <span data-translation="zh">
+            有兩種互斥的方式替你的 bot 來接收更新
+            — <a href="#getupdates">getUpdates</a> 方法是一種，<a href="#setwebhook">Webhooks</a> 是另一種。
+            傳入更新被存儲在服務器上直到 bot 接收它們，無論以何種方式，
+            但其不會被存儲超過 24 小時。
+        </span>
+    </p>
+    <p>
+        <span data-translation="origin" hidden>
+            Regardless of which option you choose, you will receive JSON-serialized <a href="#update">Update</a> objects as a result.
+        </span>
+        <span data-translation="zh">
+            無論您選擇哪個選項，你都會接收到 JSON-serialized <a href="#update">Update</a> objects。
+        </span>
+    </p>
     <h4><a class="anchor" name="update" href="#update"><i class="anchor-icon"></i></a>Update</h4>
     <p>This <a href="#available-types">object</a> represents an incoming update.<br>At most <strong>one</strong> of the optional parameters can be present in any given update.</p>
     <table class="table">
