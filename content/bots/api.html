@@ -1219,7 +1219,15 @@ assetSection: ~
         </tbody>
     </table>
     <h4><a class="anchor" name="replykeyboardmarkup" href="#replykeyboardmarkup"><i class="anchor-icon"></i></a>ReplyKeyboardMarkup</h4>
-    <p>This object represents a <a href="https://core.telegram.org/bots#keyboards">custom keyboard</a> with reply options (see <a href="https://core.telegram.org/bots#keyboards">Introduction to bots</a> for details and examples).</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents a <a href="https://core.telegram.org/bots#keyboards">custom keyboard</a> with reply options (see <a href="https://core.telegram.org/bots#keyboards">Introduction to bots</a> for details and examples).
+        </span>
+        <span data-translation="zh">
+            此 object 表示帶回覆選項的 <a href="https://core.telegram.org/bots#keyboards">客製化鍵盤</a>
+            （詳細信息和示例見 <a href="https://core.telegram.org/bots#keyboards">bots 簡介</a>）。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1230,27 +1238,90 @@ assetSection: ~
             <tr>
                 <td>keyboard</td>
                 <td>Array of Array of <a href="#keyboardbutton">KeyboardButton</a></td>
-                <td>Array of button rows, each represented by an Array of <a href="#keyboardbutton">KeyboardButton</a> objects</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Array of button rows, each represented by an Array of <a href="#keyboardbutton">KeyboardButton</a> objects
+                    </span>
+                    <span data-translation="zh">
+                        按鈕行的 Array，每行以
+                        <a href="#keyboardbutton">KeyboardButton</a> objects
+                        組成的 Array 表示
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>resize_keyboard</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Requests clients to resize the keyboard vertically for optimal fit (e.g., make the keyboard smaller if there are just two rows of buttons). Defaults to <em>false</em>, in which case the custom keyboard is always of the same height as the app&#39;s standard keyboard.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. Requests clients to resize the keyboard vertically for optimal fit (e.g., make the keyboard smaller if there are just two rows of buttons). Defaults to <em>false</em>, in which case the custom keyboard is always of the same height as the app&#39;s standard keyboard.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        請求客戶端調整垂直方向鍵盤至最適合的尺寸
+                        （例如： 如果只有兩列按鈕，則鍵盤變小）。
+                        預設為 <em>false</em>，
+                        在此情況下，客製化鍵盤始終與應用程式標準鍵盤的高度相同。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>one_time_keyboard</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Requests clients to hide the keyboard as soon as it&#39;s been used. The keyboard will still be available, but clients will automatically display the usual letter-keyboard in the chat – the user can press a special button in the input field to see the custom keyboard again. Defaults to <em>false</em>.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. Requests clients to hide the keyboard as soon as it&#39;s been used. The keyboard will still be available, but clients will automatically display the usual letter-keyboard in the chat – the user can press a special button in the input field to see the custom keyboard again. Defaults to <em>false</em>.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        請求客戶端在使用後立即隱藏鍵盤。
+                        鍵盤仍然可用，但客戶端會自動在 chat 中顯示一般的字母鍵盤
+                        – 用戶可以按下輸入欄位中的特殊按鈕來再次查看客製化鍵盤。
+                        預設為 <em>false</em>。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>selective</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.<br><br><em>Example:</em> A user requests to change the bot‘s language, bot replies to the request with a keyboard to select the new language. Other users in the group don’t see the keyboard.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>.
+                        Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果您只想給指定用戶顯示鍵盤，請使用此參數。
+                        目標對象：
+                        1）<a href="#message">Message</a> object 的 <em>text</em> 中 @mentioned 提及的用戶；
+                        2）如果 bot 的訊息是一則回覆訊息（有 <em>reply_to_message_id</em>），則為原始訊息的發送者。
+                    </span>
+                    <br><br>
+                    <span data-translation="origin" hidden>
+                        <em>Example:</em>
+                        A user requests to change the bot‘s language, bot replies to the request with a keyboard to select the new language. Other users in the group don’t see the keyboard.
+                    </span>
+                    <span data-translation="zh">
+                        <em>例如：</em>
+                        用戶請求更改機器人的語言， bot 用鍵盤回覆請求來選擇新語言。
+                        群組中的其他用戶看不到該鍵盤。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="keyboardbutton" href="#keyboardbutton"><i class="anchor-icon"></i></a>KeyboardButton</h4>
-    <p>This object represents one button of the reply keyboard. For simple text buttons <em>String</em> can be used instead of this object to specify text of the button. Optional fields are mutually exclusive.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents one button of the reply keyboard. For simple text buttons <em>String</em> can be used instead of this object to specify text of the button. Optional fields are mutually exclusive.
+        </span>
+        <span data-translation="zh">
+            此 object 表示一個回覆鍵盤的按鈕。
+            這是個簡單的文本按鈕並在回傳時以該 <em>String</em> 代表此 object。
+            <sup><a href="#interpreterNotes-004">[註4]</a></sup>
+            可選的欄位是互斥的。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1261,23 +1332,69 @@ assetSection: ~
             <tr>
                 <td>text</td>
                 <td>String</td>
-                <td>Text of the button. If none of the optional fields are used, it will be sent as a message when the button is pressed</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Text of the button. If none of the optional fields are used, it will be sent as a message when the button is pressed
+                    </span>
+                    <span data-translation="zh">
+                        按鈕的文本。
+                        如果可選欄位沒有被使用，則在按下按鈕時其將被作為訊息發送
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>request_contact</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. If <em>True</em>, the user&#39;s phone number will be sent as a contact when the button is pressed. Available in private chats only</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. If <em>True</em>, the user&#39;s phone number will be sent as a contact when the button is pressed. Available in private chats only
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果為 <em>True</em>，當按下按鈕時用戶的電話號碼將被作為聯絡人發送。
+                        僅有效於私人的 chats 中
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>request_location</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. If <em>True</em>, the user&#39;s current location will be sent when the button is pressed. Available in private chats only</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. If <em>True</em>, the user&#39;s current location will be sent when the button is pressed. Available in private chats only
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果為 <em>True</em>，當按下按鈕時用戶的當前位置將被發送。
+                        僅有效於私人的 chats 中
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
-    <p><strong>Note:</strong> <em>request_contact</em> and <em>request_location</em> options will only work in Telegram versions released after 9 April, 2016. Older clients will ignore them.</p>
+    <p>
+        <strong>Note:</strong>
+        <span data-translation="origin" hidden>
+            <em>request_contact</em> and <em>request_location</em> options will only work in Telegram versions released after 9 April, 2016. Older clients will ignore them.
+        </span>
+        <span data-translation="zh">
+            <em>request_contact</em> 和 <em>request_location</em>
+            選項只適用於 2016 年 4 月 9 日之後發布的 Telegram 版本。
+            較舊的客戶端將忽略它們。
+        </span>
+    </p>
     <h4><a class="anchor" name="replykeyboardremove" href="#replykeyboardremove"><i class="anchor-icon"></i></a>ReplyKeyboardRemove</h4>
-    <p>Upon receiving a message with this object, Telegram clients will remove the current custom keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden immediately after the user presses a button (see <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>).</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Upon receiving a message with this object, Telegram clients will remove the current custom keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden immediately after the user presses a button (see <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>).
+        </span>
+        <span data-translation="zh">
+            一旦接收到此 object 的訊息時，Telegram 客戶端將移除當前的客製化鍵盤並顯示預設的字母鍵盤。
+            預設情況下，客製化鍵盤會被顯示直到 bot 發送新的鍵盤。
+            使用當用戶按下按鈕後立即隱藏的一次性鍵盤是個例外
+            （見 <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>）。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1288,17 +1405,59 @@ assetSection: ~
             <tr>
                 <td>remove_keyboard</td>
                 <td>True</td>
-                <td>Requests clients to remove the custom keyboard (user will not be able to summon this keyboard; if you want to hide the keyboard from sight but keep it accessible, use <em>one_time_keyboard</em> in <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Requests clients to remove the custom keyboard (user will not be able to summon this keyboard; if you want to hide the keyboard from sight but keep it accessible, use <em>one_time_keyboard</em> in <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>)
+                    </span>
+                    <span data-translation="zh">
+                        請求客戶端移除客製化鍵盤（用戶將無法喚回此鍵盤；
+                        如果你是想隱藏鍵盤但仍保持其有效，請使用
+                        <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>
+                        中的 <em>one_time_keyboard</em>）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>selective</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Use this parameter if you want to remove the keyboard for specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.<br><br><em>Example:</em> A user votes in a poll, bot returns confirmation message in reply to the vote and removes the keyboard for that user, while still showing the keyboard with poll options to users who haven&#39;t voted yet.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>.
+                        Use this parameter if you want to remove the keyboard for specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果您只想對指定用戶移除鍵盤，請使用此參數。
+                        目標對象：
+                        1）<a href="#message">Message</a> object 的 <em>text</em> 中 @mentioned 提及的用戶；
+                        2）如果 bot 的訊息是一則回覆訊息（有 <em>reply_to_message_id</em>），則為原始訊息的發送者。
+                    </span>
+                    <br><br>
+                    <span data-translation="origin" hidden>
+                        <em>Example:</em>
+                        A user votes in a poll, bot returns confirmation message in reply to the vote and removes the keyboard for that user, while still showing the keyboard with poll options to users who haven&#39;t voted yet.
+                    </span>
+                    <span data-translation="zh">
+                        <em>例如：</em>
+                        一位用戶投下意見調查的投票
+                        <sup><a href="#interpreterNotes-006">[註6]</a></sup>，
+                        bot 對該用戶在回覆中回傳已投票的確認訊息並移除其鍵盤。
+                        同時仍然向尚未投票的用戶顯示意見調查選項的鍵盤。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="inlinekeyboardmarkup" href="#inlinekeyboardmarkup"><i class="anchor-icon"></i></a>InlineKeyboardMarkup</h4>
-    <p>This object represents an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a> that appears right next to the message it belongs to.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a> that appears right next to the message it belongs to.
+        </span>
+        <span data-translation="zh">
+            此 object 表示一個出現在所屬消息旁邊的
+            <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1309,13 +1468,39 @@ assetSection: ~
             <tr>
                 <td>inline_keyboard</td>
                 <td>Array of Array of <a href="#inlinekeyboardbutton">InlineKeyboardButton</a></td>
-                <td>Array of button rows, each represented by an Array of <a href="#inlinekeyboardbutton">InlineKeyboardButton</a> objects</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Array of button rows, each represented by an Array of <a href="#inlinekeyboardbutton">InlineKeyboardButton</a> objects
+                    </span>
+                    <span data-translation="zh">
+                        按鈕行的 Array，每行以
+                        <a href="#inlinekeyboardbutton">InlineKeyboardButton</a> objects
+                        組成的 Array 表示
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
-    <p><strong>Note:</strong> This will only work in Telegram versions released after 9 April, 2016. Older clients will display <em>unsupported message</em>.</p>
+    <p>
+        <strong>Note:</strong>
+        <span data-translation="origin" hidden>
+            This will only work in Telegram versions released after 9 April, 2016. Older clients will display <em>unsupported message</em>.
+        </span>
+        <span data-translation="zh">
+            這只適用於 2016 年 4 月 9 日之後發布的 Telegram 版本。
+            較舊的客戶端將顯示 <em>unsupported message</em>。
+        </span>
+    </p>
     <h4><a class="anchor" name="inlinekeyboardbutton" href="#inlinekeyboardbutton"><i class="anchor-icon"></i></a>InlineKeyboardButton</h4>
-    <p>This object represents one button of an inline keyboard. You <strong>must</strong> use exactly one of the optional fields.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents one button of an inline keyboard. You <strong>must</strong> use exactly one of the optional fields.
+        </span>
+        <span data-translation="zh">
+            此 object 表示一個內嵌鍵盤的按鈕。
+            你 <strong>必須</strong> 確切地使用可選欄位中的其中之一。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1331,37 +1516,143 @@ assetSection: ~
             <tr>
                 <td>url</td>
                 <td>String</td>
-                <td><em>Optional</em>. HTTP url to be opened when button is pressed</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>。 HTTP url to be opened when button is pressed
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        當按下按鈕時， HTTP 網址將被開啟
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>callback_data</td>
                 <td>String</td>
-                <td><em>Optional</em>. Data to be sent in a <a href="#callbackquery">callback query</a> to the bot when button is pressed, 1-64 bytes</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>。 Data to be sent in a <a href="#callbackquery">callback query</a> to the bot when button is pressed, 1-64 bytes
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        當按下按鈕時，數據被以
+                        <a href="#callbackquery">callback query</a>
+                        發送到 bot，1-64 字節
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>switch_inline_query</td>
                 <td>String</td>
-                <td><em>Optional</em>. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.<br><br><strong>Note:</strong> This offers an easy way for users to start using your bot in <a href="/bots/inline">inline mode</a> when they are currently in a private chat with it. Especially useful when combined with <a href="#answerinlinequery"><em>switch_pm…</em></a> actions – in this case the user will be automatically returned to the chat they switched from, skipping the chat selection screen.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果有設置，
+                        按下按鈕將提示用戶選擇一個其擁有的 chats，
+                        開啟該 chat 並在輸入欄位中插入 bot 的用戶名和指定的 inline query。
+                        可以是空的，在此情況下只會插入 bot 的用戶名。
+                    </span>
+                    <br><br>
+                    <strong>Note:</strong>
+                    <span data-translation="origin" hidden>
+                        This offers an easy way for users to start using your bot in <a href="https://core.telegram.org/bots/inline">inline mode</a> when they are currently in a private chat with it.
+                        Especially useful when combined with <a href="#answerinlinequery"><em>switch_pm…</em></a> actions – in this case the user will be automatically returned to the chat they switched from, skipping the chat selection screen.
+                    </span>
+                    <span data-translation="zh">
+                        當他們正與你的 bot 在私人的 chat 時，
+                        這為用戶提供一種簡單的方式開始以
+                        <a href="https://core.telegram.org/bots/inline">內嵌模式</a>
+                        使用你的 bot。
+                        Especially useful when combined with <a href="#answerinlinequery"><em>switch_pm…</em></a> actions – in this case the user will be automatically returned to the chat they switched from, skipping the chat selection screen.
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>switch_inline_query_current_chat</td>
                 <td>String</td>
-                <td><em>Optional</em>. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat&#39;s input field. Can be empty, in which case only the bot’s username will be inserted.<br><br>This offers a quick way for the user to open your bot in inline mode in the same chat – good for selecting something from multiple options.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat&#39;s input field. Can be empty, in which case only the bot’s username will be inserted.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果有設置，
+                        按下按鈕將在當前 chat 的輸入欄位中插入 bot 的用戶名和指定的 inline query。
+                        可以是空的，在此情況下只會插入 bot 的用戶名。
+                    </span>
+                    <br><br>
+                    <span data-translation="origin" hidden>
+                        This offers a quick way for the user to open your bot in inline mode in the same chat – good for selecting something from multiple options.
+                    </span>
+                    <span data-translation="zh">
+                        這為用戶提供一種快速的方式在同一個 chat 中以內嵌模式開啟你的 bot。
+                        - 適用於從多個選項中選擇某項。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>callback_game</td>
                 <td><a href="#callbackgame">CallbackGame</a></td>
-                <td><em>Optional</em>. Description of the game that will be launched when the user presses the button.<br><br><strong>NOTE:</strong> This type of button <strong>must</strong> always be the first button in the first row.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. Description of the game that will be launched when the user presses the button.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        當用戶按下按鈕時，遊戲說明將被啟動。
+                    </span>
+                    <br><br>
+                    <strong>NOTE:</strong>
+                    <span data-translation="origin" hidden>
+                        This type of button <strong>must</strong> always be the first button in the first row.
+                    </span>
+                    <span data-translation="zh">
+                        這種類型的按鈕 <strong>必須</strong> 是第一行中的第一個按鈕。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>pay</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Specify True, to send a <a href="#payments">Pay button</a>.<br><br><strong>NOTE:</strong> This type of button <strong>must</strong> always be the first button in the first row.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. Specify True, to send a <a href="#payments">Pay button</a>.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        Specify True, to send a <a href="#payments">Pay button</a>.
+                    </span>
+                    <br><br>
+                    <strong>NOTE:</strong>
+                    <span data-translation="origin" hidden>
+                        This type of button <strong>must</strong> always be the first button in the first row.
+                    </span>
+                    <span data-translation="zh">
+                        這種類型的按鈕 <strong>必須</strong> 是第一行中的第一個按鈕。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="callbackquery" href="#callbackquery"><i class="anchor-icon"></i></a>CallbackQuery</h4>
-    <p>This object represents an incoming callback query from a callback button in an <a href="/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If the button that originated the query was attached to a message sent by the bot, the field <em>message</em> will be present. If the button was attached to a message sent via the bot (in <a href="#inline-mode">inline mode</a>), the field <em>inline_message_id</em> will be present. Exactly one of the fields <em>data</em> or <em>game_short_name</em> will be present.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents an incoming callback query from a callback button in an <a href="/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If the button that originated the query was attached to a message sent by the bot, the field <em>message</em> will be present. If the button was attached to a message sent via the bot (in <a href="#inline-mode">inline mode</a>), the field <em>inline_message_id</em> will be present. Exactly one of the fields <em>data</em> or <em>game_short_name</em> will be present.
+        </span>
+        <span data-translation="zh">
+            此 object 表示來自
+            <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+            的 callback button 傳入的 callback query。
+            如果發起 query 的按鈕 was attached to a message sent by the bot, 將出現 <em>message</em> 欄位。
+            如果該按鈕 was attached to a message sent via the bot
+            (in <a href="#inline-mode">內嵌模式</a>),
+            將出現 <em>inline_message_id</em> 欄位。
+            將出現 <em>data</em> 或 <em>game_short_name</em> 欄位中的一個。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1410,7 +1701,17 @@ assetSection: ~
         <p><strong>NOTE:</strong> After the user presses a callback button, Telegram clients will display a progress bar until you call <a href="#answercallbackquery">answerCallbackQuery</a>. It is, therefore, necessary to react by calling <a href="#answercallbackquery">answerCallbackQuery</a> even if no notification to the user is needed (e.g., without specifying any of the optional parameters).</p>
     </blockquote>
     <h4><a class="anchor" name="forcereply" href="#forcereply"><i class="anchor-icon"></i></a>ForceReply</h4>
-    <p>Upon receiving a message with this object, Telegram clients will display a reply interface to the user (act as if the user has selected the bot‘s message and tapped ’Reply&#39;). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice <a href="/bots#privacy-mode">privacy mode</a>.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Upon receiving a message with this object, Telegram clients will display a reply interface to the user (act as if the user has selected the bot‘s message and tapped ’Reply&#39;). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice <a href="https://core.telegram.org/bots#privacy-mode">privacy mode</a>.
+        </span>
+        <span data-translation="zh">
+            一旦接收此 object 的訊息時，Telegram 客戶端會向用戶顯示一個回覆界面
+            （動作如同用戶已經選擇 bot 的訊息並點擊「回覆」）。
+            如果您想創建友善用戶的按步操作界面又不犧牲
+            <a href="https://core.telegram.org/bots#privacy-mode">私人模式</a>，這會是非常有用。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1421,23 +1722,83 @@ assetSection: ~
             <tr>
                 <td>force_reply</td>
                 <td>True</td>
-                <td>Shows reply interface to the user, as if they manually selected the bot‘s message and tapped ’Reply&#39;</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Shows reply interface to the user, as if they manually selected the bot‘s message and tapped ’Reply&#39;
+                    </span>
+                    <span data-translation="zh">
+                        向用戶顯示回覆界面，如同用戶已經選擇 bot 的訊息並點擊「回覆」
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>selective</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>.
+                        Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果您只想給指定用戶顯示鍵盤，請使用此參數。
+                        目標對象：
+                        1）<a href="#message">Message</a> object 的 <em>text</em> 中 @mentioned 提及的用戶；
+                        2）如果 bot 的訊息是一則回覆訊息（有 <em>reply_to_message_id</em>），則為原始訊息的發送者。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <blockquote>
-        <p><strong>Example:</strong> A <a href="https://t.me/PollBot">poll bot</a> for groups runs in privacy mode (only receives commands, replies to its messages and mentions). There could be two ways to create a new poll:</p>
+        <p>
+            <strong>Example:</strong>
+            <span data-translation="origin" hidden>
+                A <a href="https://t.me/PollBot">poll bot</a> for groups runs in privacy mode (only receives commands, replies to its messages and mentions). There could be two ways to create a new poll:
+            </span>
+            <span data-translation="zh">
+                在私人模式的群組運行的
+                <a href="https://t.me/PollBot">poll bot</a>
+                只可接收 命令、對其訊息的回覆、提及
+                <sup><a href="#interpreterNotes-004">[註4]</a></sup>。
+                有兩種方法可以創建新的意見調查：
+            </span>
+        </p>
     </blockquote>
     <ul>
-        <li>Explain the user how to send a command with parameters (e.g. /newpoll question answer1 answer2). May be appealing for hardcore users but lacks modern day polish.</li>
-        <li>Guide the user through a step-by-step process. ‘Please send me your question’, ‘Cool, now let’s add the first answer option‘, ’Great. Keep adding answer options, then send /done when you‘re ready’.</li>
+        <li>
+            <span data-translation="origin" hidden>
+                Explain the user how to send a command with parameters (e.g. /newpoll question answer1 answer2). May be appealing for hardcore users but lacks modern day polish.
+            </span>
+            <span data-translation="zh">
+                解釋用戶如何發送命令與其參數（例如 /newpoll question answer1 answer2）。
+                可能會吸引命令魔人，但缺乏更人性化的操作
+                <sup><a href="#interpreterNotes-004">[註4]</a></sup>。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                Guide the user through a step-by-step process.
+            </span>
+            <span data-translation="zh">
+                引導用戶按步操作的流程。
+            </span>
+            ‘Please send me your question’,
+            ‘Cool, now let’s add the first answer option‘,
+            ’Great. Keep adding answer options, then send /done when you‘re ready’.
+        </li>
     </ul>
-    <p>The last option is definitely more attractive. And if you use <a href="#forcereply">ForceReply</a> in your bot‘s questions, it will receive the user’s answers even if it only receives replies, commands and mentions — without any extra work for the user.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            The last option is definitely more attractive. And if you use <a href="#forcereply">ForceReply</a> in your bot‘s questions, it will receive the user’s answers even if it only receives replies, commands and mentions — without any extra work for the user.
+        </span>
+        <span data-translation="zh">
+            最後的選項肯定是更有吸引力。
+            And if you use <a href="#forcereply">ForceReply</a> in your bot‘s questions,
+            it will receive the user’s answers even if it only receives replies, commands and mentions
+            — without any extra work for the user.
+        </span>
+    </p>
     <h4><a class="anchor" name="chatphoto" href="#chatphoto"><i class="anchor-icon"></i></a>ChatPhoto</h4>
     <p>This object represents a chat photo.</p>
     <table class="table">
@@ -1817,8 +2178,20 @@ assetSection: ~
             </span>
         </li>
     </ul>
-    <h4><a class="anchor" name="inline-mode-objects" href="#inline-mode-objects"><i class="anchor-icon"></i></a>Inline mode objects</h4>
-    <p>Objects and methods used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.</p>
+    <h4>
+        <a class="anchor" name="inline-mode-objects" href="#inline-mode-objects"><i class="anchor-icon"></i></a>
+        內嵌模式的 objects
+        <span data-translation="origin">( Inline mode objects )</span>
+        <span data-translation="zh" hidden>( 內嵌模式的 objects )</span>
+    </h4>
+    <p>
+        <span data-translation="origin" hidden>
+            Objects and methods used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.
+        </span>
+        <span data-translation="zh">
+            內嵌模式使用的 objects 和 methods 在 <a href="#inline-mode">內嵌模式部分</a> 中介紹。
+        </span>
+    </p>
     <h3>
         <a class="anchor" name="available-methods" href="#available-methods"><i class="anchor-icon"></i></a>
         可用的方法
@@ -1949,7 +2322,19 @@ assetSection: ~
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
                 <td>Optional</td>
-                <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+                    </span>
+                    <span data-translation="zh">
+                        附加的界面選項。
+                        對於 <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+                        、 <a href="https://core.telegram.org/bots#keyboards">客製化回覆鍵盤</a>
+                        、 移除回覆鍵盤命令
+                        及 強制用戶回覆命令
+                        的 JSON-serialized object。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -2160,7 +2545,19 @@ pre-formatted fixed-width code block
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
                 <td>Optional</td>
-                <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+                    </span>
+                    <span data-translation="zh">
+                        附加的界面選項。
+                        對於 <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+                        、 <a href="https://core.telegram.org/bots#keyboards">客製化回覆鍵盤</a>
+                        、 移除回覆鍵盤命令
+                        及 強制用戶回覆命令
+                        的 JSON-serialized object。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -2292,7 +2689,19 @@ pre-formatted fixed-width code block
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
                 <td>Optional</td>
-                <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+                    </span>
+                    <span data-translation="zh">
+                        附加的界面選項。
+                        對於 <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+                        、 <a href="https://core.telegram.org/bots#keyboards">客製化回覆鍵盤</a>
+                        、 移除回覆鍵盤命令
+                        及 強制用戶回覆命令
+                        的 JSON-serialized object。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -2514,7 +2923,19 @@ pre-formatted fixed-width code block
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
                 <td>Optional</td>
-                <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+                    </span>
+                    <span data-translation="zh">
+                        附加的界面選項。
+                        對於 <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+                        、 <a href="https://core.telegram.org/bots#keyboards">客製化回覆鍵盤</a>
+                        、 移除回覆鍵盤命令
+                        及 強制用戶回覆命令
+                        的 JSON-serialized object。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -3474,8 +3895,20 @@ pre-formatted fixed-width code block
             </tr>
         </tbody>
     </table>
-    <h4><a class="anchor" name="inline-mode-methods" href="#inline-mode-methods"><i class="anchor-icon"></i></a>Inline mode methods</h4>
-    <p>Methods and objects used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.</p>
+    <h4>
+        <a class="anchor" name="inline-mode-methods" href="#inline-mode-methods"><i class="anchor-icon"></i></a>
+        內嵌模式的方法
+        <span data-translation="origin">( Inline mode methods )</span>
+        <span data-translation="zh" hidden>( 內嵌模式的方法 )</span>
+    </h4>
+    <p>
+        <span data-translation="origin" hidden>
+            Methods and objects used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.
+        </span>
+        <span data-translation="zh">
+            內嵌模式使用的 methods 和 objects 在 <a href="#inline-mode">內嵌模式部分</a> 中介紹。
+        </span>
+    </p>
     <h3><a class="anchor" name="updating-messages" href="#updating-messages"><i class="anchor-icon"></i></a>Updating messages</h3>
     <p>The following methods allow you to change an existing message in the message history instead of sending a new one with a result of an action. This is most useful for messages with <a href="/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a> using callback queries, but can also help reduce clutter in conversations with regular chat bots.</p>
     <p>Please note, that it is currently only possible to edit messages without <em>reply_markup</em> or with <a href="/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>.</p>
@@ -3972,11 +4405,41 @@ pre-formatted fixed-width code block
             </tr>
         </tbody>
     </table>
-    <h3><a class="anchor" name="inline-mode" href="#inline-mode"><i class="anchor-icon"></i></a>Inline mode</h3>
-    <p>The following methods and objects allow your bot to work in <a href="/bots/inline">inline mode</a>.<br>Please see our <a href="/bots/inline">Introduction to Inline bots</a> for more details.</p>
-    <p>To enable this option, send the <code>/setinline</code> command to <a href="https://t.me/botfather">@BotFather</a> and provide the placeholder text that the user will see in the input field after typing your bot’s name.</p>
+    <h3>
+        <a class="anchor" name="inline-mode" href="#inline-mode"><i class="anchor-icon"></i></a>
+        內嵌模式
+        <span data-translation="origin">( Inline mode )</span>
+        <span data-translation="zh" hidden>( 內嵌模式 )</span>
+    </h3>
+    <p>
+        <span data-translation="origin" hidden>
+            The following methods and objects allow your bot to work in <a href="https://core.telegram.org/bots/inline">inline mode</a>.<br>
+            Please see our <a href="https://core.telegram.org/bots/inline">Introduction to Inline bots</a> for more details.
+        </span>
+        <span data-translation="zh">
+            以下方法和 objects 允許你的 bot 在 <a href="https://core.telegram.org/bots/inline">內嵌模式</a> 工作。<br>
+            更多詳細信息請見我們的 <a href="https://core.telegram.org/bots/inline">內嵌 bots 簡介</a>。
+        </span>
+    </p>
+    <p>
+        <span data-translation="origin" hidden>
+            To enable this option, send the <code>/setinline</code> command to <a href="https://t.me/botfather">@BotFather</a> and provide the placeholder text that the user will see in the input field after typing your bot’s name.
+        </span>
+        <span data-translation="zh">
+            要啟用此選項， 發送 <code>/setinline</code> 命令到 <a href="https://t.me/botfather">@BotFather</a>
+            ，並且提供用戶在輸入 bot 的名稱後在輸入欄位中看到代替文字。
+        </span>
+    </p>
     <h4><a class="anchor" name="inlinequery" href="#inlinequery"><i class="anchor-icon"></i></a>InlineQuery</h4>
-    <p>This object represents an incoming inline query. When the user sends an empty query, your bot could return some default or trending results.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents an incoming inline query. When the user sends an empty query, your bot could return some default or trending results.
+        </span>
+        <span data-translation="zh">
+            此 object 表示一個傳入的 inline query。
+            當用戶發送空查詢時，你的 bot 可能會返回一些預設或趨勢的結果。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -6162,6 +6625,14 @@ pre-formatted fixed-width code block
         目前還不清楚是否本文中所有 channel 都有頻道和群組兩種意思。
     </p>
     <h6>
+        <a class="anchor" name="interpreterNotes-004" href="#interpreterNotes-004"><i class="anchor-icon"></i></a>
+        註： 004 - 譯者的母語是中文。
+    </h6>
+    <p>
+        譯者當前程度無法讀懂該原文的字面意思，
+        但仍可以依部分理解的原文和經實測的從旁推敲出用譯者口語化的解釋。
+    </p>
+    <h6>
         <a class="anchor" name="interpreterNotes-005" href="#interpreterNotes-005"><i class="anchor-icon"></i></a>
         註： 005 - performer 和 title
     </h6>
@@ -6172,6 +6643,15 @@ pre-formatted fixed-width code block
         裡頭的 “參與演出者”、“標題” 欄位相同。
         但實測上看不出填寫其欄位有任何作用。<br>
         電報討論串： <a href="https://t.me/PublicGroupForzh/71374">Telegram 討論區 #71374</a>。
+    </p>
+    <h6>
+        <a class="anchor" name="interpreterNotes-006" href="#interpreterNotes-006"><i class="anchor-icon"></i></a>
+        註： 006 - vote 和 poll
+    </h6>
+    <p>
+        “vote” 譯作投票。<br>
+        “poll” 譯作意見調查。<br>
+        參考： <a href="https://www.quora.com/What-is-the-difference-between-vote-suffrage-poll-and-ballot">What is the difference between 'vote','suffrage','poll' and 'ballot'? - Quora</a>。
     </p>
 </div>
 
