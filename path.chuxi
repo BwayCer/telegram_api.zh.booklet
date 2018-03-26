@@ -1,5 +1,7 @@
 
 -> https core.telegram.org
+/api/terms/
+/blog/login/
 /bots/api/
 /css/bootstrap.min.css
 /css/telegram.css
@@ -15,4 +17,5 @@
 /img/link-icon.png
 /img/twitter.png
 /img/twitter_2x.png
+/widgets/login/
 
