@@ -2,9 +2,9 @@
 =======
 
 
-> 版本： v0.0<br />
-> 授權： [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW)
+> 授權： [CC0-1.0](./LICENSE.md)
 
+> 版本： v0.1
 
 
 ## 簡介
