@@ -63,7 +63,7 @@ assetSection: ~
     </h3>
     <p>
         <span data-translation="origin" hidden>
-            Each bot is given a unique authentication token <a href="/bots#botfather">when it is created</a>. The token looks something like <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>, but we&#39;ll use simply <strong>&lt;token&gt;</strong> in this document instead. You can learn about obtaining tokens and generating new ones in <a href="https://core.telegram.org/bots#botfather">this document</a>.
+            Each bot is given a unique authentication token <a href="https://core.telegram.org/bots#botfather">when it is created</a>. The token looks something like <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>, but we&#39;ll use simply <strong>&lt;token&gt;</strong> in this document instead. You can learn about obtaining tokens and generating new ones in <a href="https://core.telegram.org/bots#botfather">this document</a>.
         </span>
         <span data-translation="zh">
             每個 bot 在被創建時會被給予一道獨特的授權令牌。
@@ -146,7 +146,7 @@ assetSection: ~
     <h4><a class="anchor" name="making-requests-when-getting-updates" href="#making-requests-when-getting-updates"><i class="anchor-icon"></i></a>Making requests when getting updates</h4>
     <p>If you&#39;re using <a href="#getting-updates"><strong>webhooks</strong></a>, you can perform a request to the Bot API while sending an answer to the webhook. Use either <em>application/json</em> or <em>application/x-www-form-urlencoded</em> or <em>multipart/form-data</em> response content type for passing parameters. Specify the method to be invoked in the <em>method</em> parameter of the request. It&#39;s not possible to know that such a request was successful or get its result.</p>
     <blockquote>
-        <p>Please see our <a href="/bots/faq#how-can-i-make-requests-in-response-to-updates">FAQ</a> for examples.</p>
+        <p>Please see our <a href="https://core.telegram.org/bots/faq#how-can-i-make-requests-in-response-to-updates">FAQ</a> for examples.</p>
     </blockquote>
     <h3>
         <a class="anchor" name="getting-updates" href="#getting-updates"><i class="anchor-icon"></i></a>
@@ -215,7 +215,7 @@ assetSection: ~
             <tr>
                 <td>chosen_inline_result</td>
                 <td><a href="#choseninlineresult">ChosenInlineResult</a></td>
-                <td><em>Optional</em>. The result of an <a href="#inline-mode">inline</a> query that was chosen by a user and sent to their chat partner. Please see our documentation on the <a href="/bots/inline#collecting-feedback">feedback collecting</a> for details on how to enable these updates for your bot.</td>
+                <td><em>Optional</em>. The result of an <a href="#inline-mode">inline</a> query that was chosen by a user and sent to their chat partner. Please see our documentation on the <a href="https://core.telegram.org/bots/inline#collecting-feedback">feedback collecting</a> for details on how to enable these updates for your bot.</td>
             </tr>
             <tr>
                 <td>callback_query</td>
@@ -847,6 +847,11 @@ assetSection: ~
                 <td>successful_payment</td>
                 <td><a href="#successfulpayment">SuccessfulPayment</a></td>
                 <td><em>Optional</em>. Message is a service message about a successful payment, information about the payment. <a href="#payments">More about payments »</a></td>
+            </tr>
+            <tr>
+                <td>connected_website</td>
+                <td>String</td>
+                <td><em>Optional</em>. The domain name of the website on which the user has logged in. <a href="/widgets/login">More about Telegram Login »</a></td>
             </tr>
         </tbody>
     </table>
@@ -1662,7 +1667,7 @@ assetSection: ~
     <h4><a class="anchor" name="callbackquery" href="#callbackquery"><i class="anchor-icon"></i></a>CallbackQuery</h4>
     <p>
         <span data-translation="origin" hidden>
-            This object represents an incoming callback query from a callback button in an <a href="/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If the button that originated the query was attached to a message sent by the bot, the field <em>message</em> will be present. If the button was attached to a message sent via the bot (in <a href="#inline-mode">inline mode</a>), the field <em>inline_message_id</em> will be present. Exactly one of the fields <em>data</em> or <em>game_short_name</em> will be present.
+            This object represents an incoming callback query from a callback button in an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If the button that originated the query was attached to a message sent by the bot, the field <em>message</em> will be present. If the button was attached to a message sent via the bot (in <a href="#inline-mode">inline mode</a>), the field <em>inline_message_id</em> will be present. Exactly one of the fields <em>data</em> or <em>game_short_name</em> will be present.
         </span>
         <span data-translation="zh">
             此 object 表示來自
@@ -2016,6 +2021,11 @@ assetSection: ~
                 <td>String</td>
                 <td><em>Optional</em>. Caption of the photo to be sent, 0-200 characters</td>
             </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="inputmediavideo" href="#inputmediavideo"><i class="anchor-icon"></i></a>InputMediaVideo</h4>
@@ -2043,6 +2053,12 @@ assetSection: ~
                 <td><em>Optional</em>. Caption of the video to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
+            <tr>
                 <td>width</td>
                 <td>Integer</td>
                 <td><em>Optional</em>. Video width</td>
@@ -2056,6 +2072,11 @@ assetSection: ~
                 <td>duration</td>
                 <td>Integer</td>
                 <td><em>Optional</em>. Video duration</td>
+            </tr>
+            <tr>
+                <td>supports_streaming</td>
+                <td>Boolean</td>
+                <td><em>Optional</em>. Pass <em>True</em>, if the uploaded video is suitable for streaming</td>
             </tr>
         </tbody>
     </table>
@@ -2537,6 +2558,13 @@ pre-formatted fixed-width code block
                 </td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+                </tr>
+            <tr>
+            <tr>
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
@@ -2657,6 +2685,12 @@ pre-formatted fixed-width code block
                 </td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>duration</td>
                 <td>Integer</td>
                 <td>Optional</td>
@@ -2756,6 +2790,12 @@ pre-formatted fixed-width code block
                 <td>Document caption (may also be used when resending documents by <em>file_id</em>), 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
@@ -2820,6 +2860,18 @@ pre-formatted fixed-width code block
                 <td>String</td>
                 <td>Optional</td>
                 <td>Video caption (may also be used when resending videos by <em>file_id</em>), 0-200 characters</td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
+                <td>supports_streaming</td>
+                <td>Boolean</td>
+                <td>Optional</td>
+                <td>Pass <em>True</em>, if the uploaded video is suitable for streaming</td>
             </tr>
             <tr>
                 <td>disable_notification</td>
@@ -2907,6 +2959,12 @@ pre-formatted fixed-width code block
                         Voice message 說明， 0-200 字符
                     </span>
                 </td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
             </tr>
             <tr>
                 <td>duration</td>
@@ -3570,7 +3628,7 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <h4><a class="anchor" name="exportchatinvitelink" href="#exportchatinvitelink"><i class="anchor-icon"></i></a>exportChatInviteLink</h4>
-    <p>Use this method to export an invite link to a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns exported invite link as <em>String</em> on success.</p>
+    <p>Use this method to generate a new invite link for a chat; any previously generated link is revoked. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns the new invite link as <em>String</em> on success.</p>
     <table class="table">
         <tbody>
             <tr>
@@ -3873,7 +3931,7 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <h4><a class="anchor" name="answercallbackquery" href="#answercallbackquery"><i class="anchor-icon"></i></a>answerCallbackQuery</h4>
-    <p>Use this method to send answers to callback queries sent from <a href="/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, <em>True</em> is returned.</p>
+    <p>Use this method to send answers to callback queries sent from <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, <em>True</em> is returned.</p>
     <blockquote>
         <p>Alternatively, the user can be redirected to the specified Game URL. For this option to work, you must first create a game for your bot via <a href="https://t.me/botfather">@Botfather</a> and accept the terms. Otherwise, you may use links like <code>t.me/your_bot?start=XXXX</code> that open your bot with a parameter.</p>
     </blockquote>
@@ -3932,8 +3990,8 @@ pre-formatted fixed-width code block
         </span>
     </p>
     <h3><a class="anchor" name="updating-messages" href="#updating-messages"><i class="anchor-icon"></i></a>Updating messages</h3>
-    <p>The following methods allow you to change an existing message in the message history instead of sending a new one with a result of an action. This is most useful for messages with <a href="/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a> using callback queries, but can also help reduce clutter in conversations with regular chat bots.</p>
-    <p>Please note, that it is currently only possible to edit messages without <em>reply_markup</em> or with <a href="/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>.</p>
+    <p>The following methods allow you to change an existing message in the message history instead of sending a new one with a result of an action. This is most useful for messages with <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a> using callback queries, but can also help reduce clutter in conversations with regular chat bots.</p>
+    <p>Please note, that it is currently only possible to edit messages without <em>reply_markup</em> or with <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>.</p>
     <h4><a class="anchor" name="editmessagetext" href="#editmessagetext"><i class="anchor-icon"></i></a>editMessageText</h4>
     <p>Use this method to edit text and <a href="#games">game</a> messages sent by the bot or via the bot (for <a href="#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="#message">Message</a> is returned, otherwise <em>True</em> is returned.</p>
     <table class="table">
@@ -4021,6 +4079,12 @@ pre-formatted fixed-width code block
                 <td>String</td>
                 <td>Optional</td>
                 <td>New caption of the message</td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
             </tr>
             <tr>
                 <td>reply_markup</td>
@@ -4546,7 +4610,7 @@ pre-formatted fixed-width code block
                 <td>switch_pm_parameter</td>
                 <td>String</td>
                 <td>Optional</td>
-                <td><a href="/bots#deep-linking">Deep-linking</a> parameter for the /start message sent to the bot when user presses the switch button. 1-64 characters, only <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>_</code> and <code>-</code> are allowed.<br><br><em>Example:</em> An inline bot that sends YouTube videos can ask the user to connect the bot to their YouTube account to adapt search results accordingly. To do this, it displays a ‘Connect your YouTube account’ button above the results, or even before showing any. The user presses the button, switches to a private chat with the bot and, in doing so, passes a start parameter that instructs the bot to return an oauth link. Once done, the bot can offer a <a href="#inlinekeyboardmarkup"><em>switch_inline</em></a> button so that the user can easily return to the chat where they wanted to use the bot&#39;s inline capabilities.</td>
+                <td><a href="https://core.telegram.org/bots#deep-linking">Deep-linking</a> parameter for the /start message sent to the bot when user presses the switch button. 1-64 characters, only <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>_</code> and <code>-</code> are allowed.<br><br><em>Example:</em> An inline bot that sends YouTube videos can ask the user to connect the bot to their YouTube account to adapt search results accordingly. To do this, it displays a ‘Connect your YouTube account’ button above the results, or even before showing any. The user presses the button, switches to a private chat with the bot and, in doing so, passes a start parameter that instructs the bot to return an oauth link. Once done, the bot can offer a <a href="#inlinekeyboardmarkup"><em>switch_inline</em></a> button so that the user can easily return to the chat where they wanted to use the bot&#39;s inline capabilities.</td>
             </tr>
         </tbody>
     </table>
@@ -4606,7 +4670,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>url</td>
@@ -4695,9 +4759,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the photo to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4761,9 +4830,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the GIF file to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4827,9 +4901,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the MPEG-4 file to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4886,6 +4965,11 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the video to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>video_width</td>
                 <td>Integer</td>
                 <td><em>Optional</em>. Video width</td>
@@ -4908,7 +4992,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4952,6 +5036,11 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>performer</td>
                 <td>String</td>
                 <td><em>Optional</em>. Performer</td>
@@ -4964,7 +5053,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5009,6 +5098,11 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>voice_duration</td>
                 <td>Integer</td>
                 <td><em>Optional</em>. Recording duration in seconds</td>
@@ -5016,7 +5110,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5054,6 +5148,11 @@ pre-formatted fixed-width code block
                 <td>caption</td>
                 <td>String</td>
                 <td><em>Optional</em>. Caption of the document to be sent, 0-200 characters</td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
             </tr>
             <tr>
                 <td>document_url</td>
@@ -5140,7 +5239,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5212,7 +5311,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5274,7 +5373,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5326,7 +5425,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
         </tbody>
     </table>
@@ -5371,9 +5470,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the photo to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5417,9 +5521,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the GIF file to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5463,9 +5572,15 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the MPEG-4 file to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5501,7 +5616,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5551,9 +5666,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the document to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5603,9 +5723,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the video to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5649,9 +5774,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5691,9 +5821,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5864,9 +5999,9 @@ pre-formatted fixed-width code block
             </tr>
         </tbody>
     </table>
-    <p><strong>Note:</strong> It is necessary to enable <a href="/bots/inline#collecting-feedback">inline feednack</a> via <a href="https://t.me/botfather">@Botfather</a> in order to receive these objects in updates.</p>
+    <p><strong>Note:</strong> It is necessary to enable <a href="https://core.telegram.org/bots/inline#collecting-feedback">inline feedback</a> via <a href="https://t.me/botfather">@Botfather</a> in order to receive these objects in updates.</p>
     <h3><a class="anchor" name="payments" href="#payments"><i class="anchor-icon"></i></a>Payments</h3>
-    <p>Your bot can accept payments from Telegram users. Please see the <a href="/bots/payments">introduction to payments</a> for more details on the process and how to set up payments for your bot. Please note that users will need Telegram v.4.0 or higher to use payments (released on May 18, 2017).</p>
+    <p>Your bot can accept payments from Telegram users. Please see the <a href="https://core.telegram.org/bots/payments">introduction to payments</a> for more details on the process and how to set up payments for your bot. Please note that users will need Telegram v.4.0 or higher to use payments (released on May 18, 2017).</p>
     <h4><a class="anchor" name="sendinvoice" href="#sendinvoice"><i class="anchor-icon"></i></a>sendInvoice</h4>
     <p>Use this method to send invoices. On success, the sent <a href="#message">Message</a> is returned.</p>
     <table class="table">
@@ -5917,7 +6052,7 @@ pre-formatted fixed-width code block
                 <td>currency</td>
                 <td>String</td>
                 <td>Yes</td>
-                <td>Three-letter ISO 4217 currency code, see <a href="/bots/payments#supported-currencies">more on currencies</a></td>
+                <td>Three-letter ISO 4217 currency code, see <a href="https://core.telegram.org/bots/payments#supported-currencies">more on currencies</a></td>
             </tr>
             <tr>
                 <td>prices</td>
@@ -5971,13 +6106,25 @@ pre-formatted fixed-width code block
                 <td>need_email</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Pass <em>True</em>, if you require the user&#39;s email to complete the order</td>
+                <td>Pass <em>True</em>, if you require the user&#39;s email address to complete the order</td>
             </tr>
             <tr>
                 <td>need_shipping_address</td>
                 <td>Boolean</td>
                 <td>Optional</td>
                 <td>Pass <em>True</em>, if you require the user&#39;s shipping address to complete the order</td>
+            </tr>
+            <tr>
+                <td>send_phone_number_to_provider</td>
+                <td>Boolean</td>
+                <td>Optional</td>
+                <td>Pass <em>True</em>, if user&#39;s phone number should be sent to provider</td>
+            </tr>
+            <tr>
+                <td>send_email_to_provider</td>
+                <td>Boolean</td>
+                <td>Optional</td>
+                <td>Pass <em>True</em>, if user&#39;s email address should be sent to provider</td>
             </tr>
             <tr>
                 <td>is_flexible</td>
@@ -6088,7 +6235,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>amount</td>
                 <td>Integer</td>
-                <td>Price of the product in the <em>smallest units</em> of the <a href="/bots/payments#supported-currencies">currency</a> (integer, <strong>not</strong> float/double). For example, for a price of <code>US$ 1.45</code> pass <code>amount = 145</code>. See the <em>exp</em> parameter in <a href="https://core.telegram.org/bots/payments/currencies.json">currencies.json</a>, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).</td>
+                <td>Price of the product in the <em>smallest units</em> of the <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> (integer, <strong>not</strong> float/double). For example, for a price of <code>US$ 1.45</code> pass <code>amount = 145</code>. See the <em>exp</em> parameter in <a href="https://core.telegram.org/bots/payments/currencies.json">currencies.json</a>, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).</td>
             </tr>
         </tbody>
     </table>
@@ -6119,7 +6266,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>currency</td>
                 <td>String</td>
-                <td>Three-letter ISO 4217 <a href="/bots/payments#supported-currencies">currency</a> code</td>
+                <td>Three-letter ISO 4217 <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> code</td>
             </tr>
             <tr>
                 <td>total_amount</td>
@@ -6238,7 +6385,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>currency</td>
                 <td>String</td>
-                <td>Three-letter ISO 4217 <a href="/bots/payments#supported-currencies">currency</a> code</td>
+                <td>Three-letter ISO 4217 <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> code</td>
             </tr>
             <tr>
                 <td>total_amount</td>
@@ -6325,7 +6472,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>currency</td>
                 <td>String</td>
-                <td>Three-letter ISO 4217 <a href="/bots/payments#supported-currencies">currency</a> code</td>
+                <td>Three-letter ISO 4217 <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> code</td>
             </tr>
             <tr>
                 <td>total_amount</td>
@@ -6359,7 +6506,7 @@ pre-formatted fixed-width code block
         <li>To make your game more attractive, you can upload a GIF animation that demostrates the game to the users via <a href="https://t.me/botfather">BotFather</a> (see <a href="https://t.me/gamebot?game=lumberjack">Lumberjack</a> for example).</li>
         <li>A game message will also display high scores for the current chat. Use <a href="#setgamescore">setGameScore</a> to post high scores to the chat with the game, add the <em>edit_message</em> parameter to automatically update the message with the current scoreboard.</li>
         <li>Use <a href="#getgamehighscores">getGameHighScores</a> to get data for in-game high score tables.</li>
-        <li>You can also add an extra <a href="/bots/games#sharing-your-game-to-telegram-chats">sharing button</a> for users to share their best score to different chats.</li>
+        <li>You can also add an extra <a href="https://core.telegram.org/bots/games#sharing-your-game-to-telegram-chats">sharing button</a> for users to share their best score to different chats.</li>
         <li>For examples of what can be done using this new stuff, check the <a href="https://t.me/gamebot">@gamebot</a> and <a href="https://t.me/gamee">@gamee</a> bots.</li>
     </ul>
     <h4><a class="anchor" name="sendgame" href="#sendgame"><i class="anchor-icon"></i></a>sendGame</h4>
@@ -6603,7 +6750,7 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <hr>
-    <p>And that‘s about all we’ve got for now.<br>If you&#39;ve got any questions, please check out our <a href="/bots/faq"><strong>Bot FAQ »</strong></a></p>
+    <p>And that‘s about all we’ve got for now.<br>If you&#39;ve got any questions, please check out our <a href="https://core.telegram.org/bots/faq"><strong>Bot FAQ »</strong></a></p>
     <h3>
         <a class="anchor" name="interpreterNotes" href="#interpreterNotes"><i class="anchor-icon"></i></a>
         譯者註釋
