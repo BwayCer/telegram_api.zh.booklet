@@ -107,12 +107,12 @@ To learn how to create…">
     </h3>
     <p>
         <span data-translation="origin" hidden>
-            Each bot is given a unique authentication token <a href="../../bots#botfather">when it is created</a>. The token looks something like <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>, but we&#39;ll use simply <strong>&lt;token&gt;</strong> in this document instead. You can learn about obtaining tokens and generating new ones in <a href="https://core.telegram.org/bots#botfather">this document</a>.
+            Each bot is given a unique authentication token <a href="https://core.telegram.org/bots#botfather">when it is created</a>. The token looks something like <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code>, but we&#39;ll use simply <strong>&lt;token&gt;</strong> in this document instead. You can learn about obtaining tokens and generating new ones in <a href="https://core.telegram.org/bots#botfather">this document</a>.
         </span>
         <span data-translation="zh">
             每個 bot 在被創建時會被給予一道獨特的授權令牌。
             授權令牌看起來像是 <code>123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11</code> 的樣子，
-            但我們將在本文中以簡單的 <strong>&lt;token&gt;</strong> 替代。
+            但我們將在本文中以簡單的 <strong>&lt;token&gt;</strong> 代替。
             你能在 <a href="https://core.telegram.org/bots#botfather">這篇文件</a>
             中學習到關於如何獲取令牌和產生新的一個 bot。
         </span>
@@ -190,11 +190,33 @@ To learn how to create…">
     <h4><a class="anchor" name="making-requests-when-getting-updates" href="#making-requests-when-getting-updates"><i class="anchor-icon"></i></a>Making requests when getting updates</h4>
     <p>If you&#39;re using <a href="#getting-updates"><strong>webhooks</strong></a>, you can perform a request to the Bot API while sending an answer to the webhook. Use either <em>application/json</em> or <em>application/x-www-form-urlencoded</em> or <em>multipart/form-data</em> response content type for passing parameters. Specify the method to be invoked in the <em>method</em> parameter of the request. It&#39;s not possible to know that such a request was successful or get its result.</p>
     <blockquote>
-        <p>Please see our <a href="../../bots/faq#how-can-i-make-requests-in-response-to-updates">FAQ</a> for examples.</p>
+        <p>Please see our <a href="https://core.telegram.org/bots/faq#how-can-i-make-requests-in-response-to-updates">FAQ</a> for examples.</p>
     </blockquote>
-    <h3><a class="anchor" name="getting-updates" href="#getting-updates"><i class="anchor-icon"></i></a>Getting updates</h3>
-    <p>There are two mutually exclusive ways of receiving updates for your bot — the <a href="#getupdates">getUpdates</a> method on one hand and <a href="#setwebhook">Webhooks</a> on the other. Incoming updates are stored on the server until the bot receives them either way, but they will not be kept longer than 24 hours.</p>
-    <p>Regardless of which option you choose, you will receive JSON-serialized <a href="#update">Update</a> objects as a result.</p>
+    <h3>
+        <a class="anchor" name="getting-updates" href="#getting-updates"><i class="anchor-icon"></i></a>
+        取得更新
+        <span data-translation="origin">( Getting updates )</span>
+        <span data-translation="zh" hidden>( 取得更新 )</span>
+    </h3>
+    <p>
+        <span data-translation="origin" hidden>
+            There are two mutually exclusive ways of receiving updates for your bot — the <a href="#getupdates">getUpdates</a> method on one hand and <a href="#setwebhook">Webhooks</a> on the other. Incoming updates are stored on the server until the bot receives them either way, but they will not be kept longer than 24 hours.
+        </span>
+        <span data-translation="zh">
+            有兩種互斥的方式替你的 bot 來接收更新
+            — <a href="#getupdates">getUpdates</a> 方法是一種，<a href="#setwebhook">Webhooks</a> 是另一種。
+            傳入更新被存儲在服務器上直到 bot 接收它們，無論以何種方式，
+            但其不會被存儲超過 24 小時。
+        </span>
+    </p>
+    <p>
+        <span data-translation="origin" hidden>
+            Regardless of which option you choose, you will receive JSON-serialized <a href="#update">Update</a> objects as a result.
+        </span>
+        <span data-translation="zh">
+            無論您選擇哪個選項，你都會接收到 JSON-serialized <a href="#update">Update</a> objects。
+        </span>
+    </p>
     <h4><a class="anchor" name="update" href="#update"><i class="anchor-icon"></i></a>Update</h4>
     <p>This <a href="#available-types">object</a> represents an incoming update.<br>At most <strong>one</strong> of the optional parameters can be present in any given update.</p>
     <table class="table">
@@ -237,7 +259,7 @@ To learn how to create…">
             <tr>
                 <td>chosen_inline_result</td>
                 <td><a href="#choseninlineresult">ChosenInlineResult</a></td>
-                <td><em>Optional</em>. The result of an <a href="#inline-mode">inline</a> query that was chosen by a user and sent to their chat partner. Please see our documentation on the <a href="../../bots/inline#collecting-feedback">feedback collecting</a> for details on how to enable these updates for your bot.</td>
+                <td><em>Optional</em>. The result of an <a href="#inline-mode">inline</a> query that was chosen by a user and sent to their chat partner. Please see our documentation on the <a href="https://core.telegram.org/bots/inline#collecting-feedback">feedback collecting</a> for details on how to enable these updates for your bot.</td>
             </tr>
             <tr>
                 <td>callback_query</td>
@@ -356,7 +378,7 @@ To learn how to create…">
                         例如， 指定 [“message”, “edited_channel_post”, “callback_query”]
                         就只接收這些類型的更新。
                         查看 <a href="#update">Update</a> 有關於可用更新類型的完整列表。
-                        指定一個空列表來接收所有更新類型（默認）。
+                        指定一個空列表來接收所有更新類型（預設）。
                         如果未指定， 則將使用之前的設置。
                     </span>
                     <br><br>
@@ -870,6 +892,11 @@ To learn how to create…">
                 <td><a href="#successfulpayment">SuccessfulPayment</a></td>
                 <td><em>Optional</em>. Message is a service message about a successful payment, information about the payment. <a href="#payments">More about payments »</a></td>
             </tr>
+            <tr>
+                <td>connected_website</td>
+                <td>String</td>
+                <td><em>Optional</em>. The domain name of the website on which the user has logged in. <a href="../../widgets/login">More about Telegram Login »</a></td>
+            </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="messageentity" href="#messageentity"><i class="anchor-icon"></i></a>MessageEntity</h4>
@@ -1263,7 +1290,15 @@ To learn how to create…">
         </tbody>
     </table>
     <h4><a class="anchor" name="replykeyboardmarkup" href="#replykeyboardmarkup"><i class="anchor-icon"></i></a>ReplyKeyboardMarkup</h4>
-    <p>This object represents a <a href="https://core.telegram.org/bots#keyboards">custom keyboard</a> with reply options (see <a href="https://core.telegram.org/bots#keyboards">Introduction to bots</a> for details and examples).</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents a <a href="https://core.telegram.org/bots#keyboards">custom keyboard</a> with reply options (see <a href="https://core.telegram.org/bots#keyboards">Introduction to bots</a> for details and examples).
+        </span>
+        <span data-translation="zh">
+            此 object 表示帶回覆選項的 <a href="https://core.telegram.org/bots#keyboards">客製化鍵盤</a>
+            （詳細信息和示例見 <a href="https://core.telegram.org/bots#keyboards">bots 簡介</a>）。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1274,27 +1309,90 @@ To learn how to create…">
             <tr>
                 <td>keyboard</td>
                 <td>Array of Array of <a href="#keyboardbutton">KeyboardButton</a></td>
-                <td>Array of button rows, each represented by an Array of <a href="#keyboardbutton">KeyboardButton</a> objects</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Array of button rows, each represented by an Array of <a href="#keyboardbutton">KeyboardButton</a> objects
+                    </span>
+                    <span data-translation="zh">
+                        按鈕行的 Array，每行以
+                        <a href="#keyboardbutton">KeyboardButton</a> objects
+                        組成的 Array 表示
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>resize_keyboard</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Requests clients to resize the keyboard vertically for optimal fit (e.g., make the keyboard smaller if there are just two rows of buttons). Defaults to <em>false</em>, in which case the custom keyboard is always of the same height as the app&#39;s standard keyboard.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. Requests clients to resize the keyboard vertically for optimal fit (e.g., make the keyboard smaller if there are just two rows of buttons). Defaults to <em>false</em>, in which case the custom keyboard is always of the same height as the app&#39;s standard keyboard.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        請求客戶端調整垂直方向鍵盤至最適合的尺寸
+                        （例如： 如果只有兩列按鈕，則鍵盤變小）。
+                        預設為 <em>false</em>，
+                        在此情況下，客製化鍵盤始終與應用程式標準鍵盤的高度相同。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>one_time_keyboard</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Requests clients to hide the keyboard as soon as it&#39;s been used. The keyboard will still be available, but clients will automatically display the usual letter-keyboard in the chat – the user can press a special button in the input field to see the custom keyboard again. Defaults to <em>false</em>.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. Requests clients to hide the keyboard as soon as it&#39;s been used. The keyboard will still be available, but clients will automatically display the usual letter-keyboard in the chat – the user can press a special button in the input field to see the custom keyboard again. Defaults to <em>false</em>.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        請求客戶端在使用後立即隱藏鍵盤。
+                        鍵盤仍然可用，但客戶端會自動在 chat 中顯示一般的字母鍵盤
+                        – 用戶可以按下輸入欄位中的特殊按鈕來再次查看客製化鍵盤。
+                        預設為 <em>false</em>。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>selective</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.<br><br><em>Example:</em> A user requests to change the bot‘s language, bot replies to the request with a keyboard to select the new language. Other users in the group don’t see the keyboard.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>.
+                        Use this parameter if you want to show the keyboard to specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果您只想給指定用戶顯示鍵盤，請使用此參數。
+                        目標對象：
+                        1）<a href="#message">Message</a> object 的 <em>text</em> 中 @mentioned 提及的用戶；
+                        2）如果 bot 的訊息是一則回覆訊息（有 <em>reply_to_message_id</em>），則為原始訊息的發送者。
+                    </span>
+                    <br><br>
+                    <span data-translation="origin" hidden>
+                        <em>Example:</em>
+                        A user requests to change the bot‘s language, bot replies to the request with a keyboard to select the new language. Other users in the group don’t see the keyboard.
+                    </span>
+                    <span data-translation="zh">
+                        <em>例如：</em>
+                        用戶請求更改機器人的語言， bot 用鍵盤回覆請求來選擇新語言。
+                        群組中的其他用戶看不到該鍵盤。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="keyboardbutton" href="#keyboardbutton"><i class="anchor-icon"></i></a>KeyboardButton</h4>
-    <p>This object represents one button of the reply keyboard. For simple text buttons <em>String</em> can be used instead of this object to specify text of the button. Optional fields are mutually exclusive.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents one button of the reply keyboard. For simple text buttons <em>String</em> can be used instead of this object to specify text of the button. Optional fields are mutually exclusive.
+        </span>
+        <span data-translation="zh">
+            此 object 表示一個回覆鍵盤的按鈕。
+            這是個簡單的文本按鈕並在回傳時以該 <em>String</em> 代表此 object。
+            <sup><a href="#interpreterNotes-004">[註4]</a></sup>
+            可選的欄位是互斥的。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1305,23 +1403,69 @@ To learn how to create…">
             <tr>
                 <td>text</td>
                 <td>String</td>
-                <td>Text of the button. If none of the optional fields are used, it will be sent as a message when the button is pressed</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Text of the button. If none of the optional fields are used, it will be sent as a message when the button is pressed
+                    </span>
+                    <span data-translation="zh">
+                        按鈕的文本。
+                        如果可選欄位沒有被使用，則在按下按鈕時其將被作為訊息發送
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>request_contact</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. If <em>True</em>, the user&#39;s phone number will be sent as a contact when the button is pressed. Available in private chats only</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. If <em>True</em>, the user&#39;s phone number will be sent as a contact when the button is pressed. Available in private chats only
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果為 <em>True</em>，當按下按鈕時用戶的電話號碼將被作為聯絡人發送。
+                        僅有效於私人的 chats 中
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>request_location</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. If <em>True</em>, the user&#39;s current location will be sent when the button is pressed. Available in private chats only</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. If <em>True</em>, the user&#39;s current location will be sent when the button is pressed. Available in private chats only
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果為 <em>True</em>，當按下按鈕時用戶的當前位置將被發送。
+                        僅有效於私人的 chats 中
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
-    <p><strong>Note:</strong> <em>request_contact</em> and <em>request_location</em> options will only work in Telegram versions released after 9 April, 2016. Older clients will ignore them.</p>
+    <p>
+        <strong>Note:</strong>
+        <span data-translation="origin" hidden>
+            <em>request_contact</em> and <em>request_location</em> options will only work in Telegram versions released after 9 April, 2016. Older clients will ignore them.
+        </span>
+        <span data-translation="zh">
+            <em>request_contact</em> 和 <em>request_location</em>
+            選項只適用於 2016 年 4 月 9 日之後發布的 Telegram 版本。
+            較舊的客戶端將忽略它們。
+        </span>
+    </p>
     <h4><a class="anchor" name="replykeyboardremove" href="#replykeyboardremove"><i class="anchor-icon"></i></a>ReplyKeyboardRemove</h4>
-    <p>Upon receiving a message with this object, Telegram clients will remove the current custom keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden immediately after the user presses a button (see <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>).</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Upon receiving a message with this object, Telegram clients will remove the current custom keyboard and display the default letter-keyboard. By default, custom keyboards are displayed until a new keyboard is sent by a bot. An exception is made for one-time keyboards that are hidden immediately after the user presses a button (see <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>).
+        </span>
+        <span data-translation="zh">
+            一旦接收到此 object 的訊息時，Telegram 客戶端將移除當前的客製化鍵盤並顯示預設的字母鍵盤。
+            預設情況下，客製化鍵盤會被顯示直到 bot 發送新的鍵盤。
+            使用當用戶按下按鈕後立即隱藏的一次性鍵盤是個例外
+            （見 <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>）。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1332,17 +1476,59 @@ To learn how to create…">
             <tr>
                 <td>remove_keyboard</td>
                 <td>True</td>
-                <td>Requests clients to remove the custom keyboard (user will not be able to summon this keyboard; if you want to hide the keyboard from sight but keep it accessible, use <em>one_time_keyboard</em> in <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Requests clients to remove the custom keyboard (user will not be able to summon this keyboard; if you want to hide the keyboard from sight but keep it accessible, use <em>one_time_keyboard</em> in <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>)
+                    </span>
+                    <span data-translation="zh">
+                        請求客戶端移除客製化鍵盤（用戶將無法喚回此鍵盤；
+                        如果你是想隱藏鍵盤但仍保持其有效，請使用
+                        <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>
+                        中的 <em>one_time_keyboard</em>）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>selective</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Use this parameter if you want to remove the keyboard for specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.<br><br><em>Example:</em> A user votes in a poll, bot returns confirmation message in reply to the vote and removes the keyboard for that user, while still showing the keyboard with poll options to users who haven&#39;t voted yet.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>.
+                        Use this parameter if you want to remove the keyboard for specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果您只想對指定用戶移除鍵盤，請使用此參數。
+                        目標對象：
+                        1）<a href="#message">Message</a> object 的 <em>text</em> 中 @mentioned 提及的用戶；
+                        2）如果 bot 的訊息是一則回覆訊息（有 <em>reply_to_message_id</em>），則為原始訊息的發送者。
+                    </span>
+                    <br><br>
+                    <span data-translation="origin" hidden>
+                        <em>Example:</em>
+                        A user votes in a poll, bot returns confirmation message in reply to the vote and removes the keyboard for that user, while still showing the keyboard with poll options to users who haven&#39;t voted yet.
+                    </span>
+                    <span data-translation="zh">
+                        <em>例如：</em>
+                        一位用戶投下意見調查的投票
+                        <sup><a href="#interpreterNotes-006">[註6]</a></sup>，
+                        bot 對該用戶在回覆中回傳已投票的確認訊息並移除其鍵盤。
+                        同時仍然向尚未投票的用戶顯示意見調查選項的鍵盤。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="inlinekeyboardmarkup" href="#inlinekeyboardmarkup"><i class="anchor-icon"></i></a>InlineKeyboardMarkup</h4>
-    <p>This object represents an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a> that appears right next to the message it belongs to.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a> that appears right next to the message it belongs to.
+        </span>
+        <span data-translation="zh">
+            此 object 表示一個出現在所屬消息旁邊的
+            <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1353,13 +1539,39 @@ To learn how to create…">
             <tr>
                 <td>inline_keyboard</td>
                 <td>Array of Array of <a href="#inlinekeyboardbutton">InlineKeyboardButton</a></td>
-                <td>Array of button rows, each represented by an Array of <a href="#inlinekeyboardbutton">InlineKeyboardButton</a> objects</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Array of button rows, each represented by an Array of <a href="#inlinekeyboardbutton">InlineKeyboardButton</a> objects
+                    </span>
+                    <span data-translation="zh">
+                        按鈕行的 Array，每行以
+                        <a href="#inlinekeyboardbutton">InlineKeyboardButton</a> objects
+                        組成的 Array 表示
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
-    <p><strong>Note:</strong> This will only work in Telegram versions released after 9 April, 2016. Older clients will display <em>unsupported message</em>.</p>
+    <p>
+        <strong>Note:</strong>
+        <span data-translation="origin" hidden>
+            This will only work in Telegram versions released after 9 April, 2016. Older clients will display <em>unsupported message</em>.
+        </span>
+        <span data-translation="zh">
+            這只適用於 2016 年 4 月 9 日之後發布的 Telegram 版本。
+            較舊的客戶端將顯示 <em>unsupported message</em>。
+        </span>
+    </p>
     <h4><a class="anchor" name="inlinekeyboardbutton" href="#inlinekeyboardbutton"><i class="anchor-icon"></i></a>InlineKeyboardButton</h4>
-    <p>This object represents one button of an inline keyboard. You <strong>must</strong> use exactly one of the optional fields.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents one button of an inline keyboard. You <strong>must</strong> use exactly one of the optional fields.
+        </span>
+        <span data-translation="zh">
+            此 object 表示一個內嵌鍵盤的按鈕。
+            你 <strong>必須</strong> 確切地使用可選欄位中的其中之一。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1375,37 +1587,143 @@ To learn how to create…">
             <tr>
                 <td>url</td>
                 <td>String</td>
-                <td><em>Optional</em>. HTTP url to be opened when button is pressed</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>。 HTTP url to be opened when button is pressed
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        當按下按鈕時， HTTP 網址將被開啟
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>callback_data</td>
                 <td>String</td>
-                <td><em>Optional</em>. Data to be sent in a <a href="#callbackquery">callback query</a> to the bot when button is pressed, 1-64 bytes</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>。 Data to be sent in a <a href="#callbackquery">callback query</a> to the bot when button is pressed, 1-64 bytes
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        當按下按鈕時，數據被以
+                        <a href="#callbackquery">callback query</a>
+                        發送到 bot，1-64 字節
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>switch_inline_query</td>
                 <td>String</td>
-                <td><em>Optional</em>. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.<br><br><strong>Note:</strong> This offers an easy way for users to start using your bot in <a href="../../bots/inline">inline mode</a> when they are currently in a private chat with it. Especially useful when combined with <a href="#answerinlinequery"><em>switch_pm…</em></a> actions – in this case the user will be automatically returned to the chat they switched from, skipping the chat selection screen.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. If set, pressing the button will prompt the user to select one of their chats, open that chat and insert the bot‘s username and the specified inline query in the input field. Can be empty, in which case just the bot’s username will be inserted.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果有設置，
+                        按下按鈕將提示用戶選擇一個其擁有的 chats，
+                        開啟該 chat 並在輸入欄位中插入 bot 的用戶名和指定的 inline query。
+                        可以是空的，在此情況下只會插入 bot 的用戶名。
+                    </span>
+                    <br><br>
+                    <strong>Note:</strong>
+                    <span data-translation="origin" hidden>
+                        This offers an easy way for users to start using your bot in <a href="https://core.telegram.org/bots/inline">inline mode</a> when they are currently in a private chat with it.
+                        Especially useful when combined with <a href="#answerinlinequery"><em>switch_pm…</em></a> actions – in this case the user will be automatically returned to the chat they switched from, skipping the chat selection screen.
+                    </span>
+                    <span data-translation="zh">
+                        當他們正與你的 bot 在私人的 chat 時，
+                        這為用戶提供一種簡單的方式開始以
+                        <a href="https://core.telegram.org/bots/inline">內嵌模式</a>
+                        使用你的 bot。
+                        Especially useful when combined with <a href="#answerinlinequery"><em>switch_pm…</em></a> actions – in this case the user will be automatically returned to the chat they switched from, skipping the chat selection screen.
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>switch_inline_query_current_chat</td>
                 <td>String</td>
-                <td><em>Optional</em>. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat&#39;s input field. Can be empty, in which case only the bot’s username will be inserted.<br><br>This offers a quick way for the user to open your bot in inline mode in the same chat – good for selecting something from multiple options.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. If set, pressing the button will insert the bot‘s username and the specified inline query in the current chat&#39;s input field. Can be empty, in which case only the bot’s username will be inserted.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果有設置，
+                        按下按鈕將在當前 chat 的輸入欄位中插入 bot 的用戶名和指定的 inline query。
+                        可以是空的，在此情況下只會插入 bot 的用戶名。
+                    </span>
+                    <br><br>
+                    <span data-translation="origin" hidden>
+                        This offers a quick way for the user to open your bot in inline mode in the same chat – good for selecting something from multiple options.
+                    </span>
+                    <span data-translation="zh">
+                        這為用戶提供一種快速的方式在同一個 chat 中以內嵌模式開啟你的 bot。
+                        - 適用於從多個選項中選擇某項。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>callback_game</td>
                 <td><a href="#callbackgame">CallbackGame</a></td>
-                <td><em>Optional</em>. Description of the game that will be launched when the user presses the button.<br><br><strong>NOTE:</strong> This type of button <strong>must</strong> always be the first button in the first row.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. Description of the game that will be launched when the user presses the button.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        當用戶按下按鈕時，遊戲說明將被啟動。
+                    </span>
+                    <br><br>
+                    <strong>NOTE:</strong>
+                    <span data-translation="origin" hidden>
+                        This type of button <strong>must</strong> always be the first button in the first row.
+                    </span>
+                    <span data-translation="zh">
+                        這種類型的按鈕 <strong>必須</strong> 是第一行中的第一個按鈕。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>pay</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Specify True, to send a <a href="#payments">Pay button</a>.<br><br><strong>NOTE:</strong> This type of button <strong>must</strong> always be the first button in the first row.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>. Specify True, to send a <a href="#payments">Pay button</a>.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        Specify True, to send a <a href="#payments">Pay button</a>.
+                    </span>
+                    <br><br>
+                    <strong>NOTE:</strong>
+                    <span data-translation="origin" hidden>
+                        This type of button <strong>must</strong> always be the first button in the first row.
+                    </span>
+                    <span data-translation="zh">
+                        這種類型的按鈕 <strong>必須</strong> 是第一行中的第一個按鈕。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="callbackquery" href="#callbackquery"><i class="anchor-icon"></i></a>CallbackQuery</h4>
-    <p>This object represents an incoming callback query from a callback button in an <a href="../../bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If the button that originated the query was attached to a message sent by the bot, the field <em>message</em> will be present. If the button was attached to a message sent via the bot (in <a href="#inline-mode">inline mode</a>), the field <em>inline_message_id</em> will be present. Exactly one of the fields <em>data</em> or <em>game_short_name</em> will be present.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents an incoming callback query from a callback button in an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>. If the button that originated the query was attached to a message sent by the bot, the field <em>message</em> will be present. If the button was attached to a message sent via the bot (in <a href="#inline-mode">inline mode</a>), the field <em>inline_message_id</em> will be present. Exactly one of the fields <em>data</em> or <em>game_short_name</em> will be present.
+        </span>
+        <span data-translation="zh">
+            此 object 表示來自
+            <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+            的 callback button 傳入的 callback query。
+            如果發起 query 的按鈕 was attached to a message sent by the bot, 將出現 <em>message</em> 欄位。
+            如果該按鈕 was attached to a message sent via the bot
+            (in <a href="#inline-mode">內嵌模式</a>),
+            將出現 <em>inline_message_id</em> 欄位。
+            將出現 <em>data</em> 或 <em>game_short_name</em> 欄位中的一個。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1454,7 +1772,17 @@ To learn how to create…">
         <p><strong>NOTE:</strong> After the user presses a callback button, Telegram clients will display a progress bar until you call <a href="#answercallbackquery">answerCallbackQuery</a>. It is, therefore, necessary to react by calling <a href="#answercallbackquery">answerCallbackQuery</a> even if no notification to the user is needed (e.g., without specifying any of the optional parameters).</p>
     </blockquote>
     <h4><a class="anchor" name="forcereply" href="#forcereply"><i class="anchor-icon"></i></a>ForceReply</h4>
-    <p>Upon receiving a message with this object, Telegram clients will display a reply interface to the user (act as if the user has selected the bot‘s message and tapped ’Reply&#39;). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice <a href="../../bots#privacy-mode">privacy mode</a>.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Upon receiving a message with this object, Telegram clients will display a reply interface to the user (act as if the user has selected the bot‘s message and tapped ’Reply&#39;). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice <a href="https://core.telegram.org/bots#privacy-mode">privacy mode</a>.
+        </span>
+        <span data-translation="zh">
+            一旦接收此 object 的訊息時，Telegram 客戶端會向用戶顯示一個回覆界面
+            （動作如同用戶已經選擇 bot 的訊息並點擊「回覆」）。
+            如果您想創建友善用戶的按步操作界面又不犧牲
+            <a href="https://core.telegram.org/bots#privacy-mode">私人模式</a>，這會是非常有用。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -1465,23 +1793,83 @@ To learn how to create…">
             <tr>
                 <td>force_reply</td>
                 <td>True</td>
-                <td>Shows reply interface to the user, as if they manually selected the bot‘s message and tapped ’Reply&#39;</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Shows reply interface to the user, as if they manually selected the bot‘s message and tapped ’Reply&#39;
+                    </span>
+                    <span data-translation="zh">
+                        向用戶顯示回覆界面，如同用戶已經選擇 bot 的訊息並點擊「回覆」
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>selective</td>
                 <td>Boolean</td>
-                <td><em>Optional</em>. Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        <em>Optional</em>.
+                        Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the <em>text</em> of the <a href="#message">Message</a> object; 2) if the bot&#39;s message is a reply (has <em>reply_to_message_id</em>), sender of the original message.
+                    </span>
+                    <span data-translation="zh">
+                        <em>可選的</em>。
+                        如果您只想給指定用戶顯示鍵盤，請使用此參數。
+                        目標對象：
+                        1）<a href="#message">Message</a> object 的 <em>text</em> 中 @mentioned 提及的用戶；
+                        2）如果 bot 的訊息是一則回覆訊息（有 <em>reply_to_message_id</em>），則為原始訊息的發送者。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
     <blockquote>
-        <p><strong>Example:</strong> A <a href="https://t.me/PollBot">poll bot</a> for groups runs in privacy mode (only receives commands, replies to its messages and mentions). There could be two ways to create a new poll:</p>
+        <p>
+            <strong>Example:</strong>
+            <span data-translation="origin" hidden>
+                A <a href="https://t.me/PollBot">poll bot</a> for groups runs in privacy mode (only receives commands, replies to its messages and mentions). There could be two ways to create a new poll:
+            </span>
+            <span data-translation="zh">
+                在私人模式的群組運行的
+                <a href="https://t.me/PollBot">poll bot</a>
+                只可接收 命令、對其訊息的回覆、提及
+                <sup><a href="#interpreterNotes-004">[註4]</a></sup>。
+                有兩種方法可以創建新的意見調查：
+            </span>
+        </p>
     </blockquote>
     <ul>
-        <li>Explain the user how to send a command with parameters (e.g. /newpoll question answer1 answer2). May be appealing for hardcore users but lacks modern day polish.</li>
-        <li>Guide the user through a step-by-step process. ‘Please send me your question’, ‘Cool, now let’s add the first answer option‘, ’Great. Keep adding answer options, then send /done when you‘re ready’.</li>
+        <li>
+            <span data-translation="origin" hidden>
+                Explain the user how to send a command with parameters (e.g. /newpoll question answer1 answer2). May be appealing for hardcore users but lacks modern day polish.
+            </span>
+            <span data-translation="zh">
+                解釋用戶如何發送命令與其參數（例如 /newpoll question answer1 answer2）。
+                可能會吸引命令魔人，但缺乏更人性化的操作
+                <sup><a href="#interpreterNotes-004">[註4]</a></sup>。
+            </span>
+        </li>
+        <li>
+            <span data-translation="origin" hidden>
+                Guide the user through a step-by-step process.
+            </span>
+            <span data-translation="zh">
+                引導用戶按步操作的流程。
+            </span>
+            ‘Please send me your question’,
+            ‘Cool, now let’s add the first answer option‘,
+            ’Great. Keep adding answer options, then send /done when you‘re ready’.
+        </li>
     </ul>
-    <p>The last option is definitely more attractive. And if you use <a href="#forcereply">ForceReply</a> in your bot‘s questions, it will receive the user’s answers even if it only receives replies, commands and mentions — without any extra work for the user.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            The last option is definitely more attractive. And if you use <a href="#forcereply">ForceReply</a> in your bot‘s questions, it will receive the user’s answers even if it only receives replies, commands and mentions — without any extra work for the user.
+        </span>
+        <span data-translation="zh">
+            最後的選項肯定是更有吸引力。
+            And if you use <a href="#forcereply">ForceReply</a> in your bot‘s questions,
+            it will receive the user’s answers even if it only receives replies, commands and mentions
+            — without any extra work for the user.
+        </span>
+    </p>
     <h4><a class="anchor" name="chatphoto" href="#chatphoto"><i class="anchor-icon"></i></a>ChatPhoto</h4>
     <p>This object represents a chat photo.</p>
     <table class="table">
@@ -1677,6 +2065,11 @@ To learn how to create…">
                 <td>String</td>
                 <td><em>Optional</em>. Caption of the photo to be sent, 0-200 characters</td>
             </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
         </tbody>
     </table>
     <h4><a class="anchor" name="inputmediavideo" href="#inputmediavideo"><i class="anchor-icon"></i></a>InputMediaVideo</h4>
@@ -1704,6 +2097,12 @@ To learn how to create…">
                 <td><em>Optional</em>. Caption of the video to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
+            <tr>
                 <td>width</td>
                 <td>Integer</td>
                 <td><em>Optional</em>. Video width</td>
@@ -1717,6 +2116,11 @@ To learn how to create…">
                 <td>duration</td>
                 <td>Integer</td>
                 <td><em>Optional</em>. Video duration</td>
+            </tr>
+            <tr>
+                <td>supports_streaming</td>
+                <td>Boolean</td>
+                <td><em>Optional</em>. Pass <em>True</em>, if the uploaded video is suitable for streaming</td>
             </tr>
         </tbody>
     </table>
@@ -1733,7 +2137,7 @@ To learn how to create…">
             There are three ways to send files (photos, stickers, audio, media, etc.):
         </span>
         <span data-translation="zh">
-            有三種方式發送文件（照片、貼紙、音頻、媒體 ... 等）：
+            有三種方式發送文件（圖片 photos、貼紙 stickers、音頻 audio、媒體 media ... 等）：
         </span>
     </p>
     <ol>
@@ -1857,12 +2261,24 @@ To learn how to create…">
                 Other configurations may work but we can&#39;t guarantee that they will.
             </span>
             <span data-translation="zh">
-                其他配置可能能工作， 但我們不能保證將來也是。
+                其他配置可能能工作，但我們不能保證未來也是。
             </span>
         </li>
     </ul>
-    <h4><a class="anchor" name="inline-mode-objects" href="#inline-mode-objects"><i class="anchor-icon"></i></a>Inline mode objects</h4>
-    <p>Objects and methods used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.</p>
+    <h4>
+        <a class="anchor" name="inline-mode-objects" href="#inline-mode-objects"><i class="anchor-icon"></i></a>
+        內嵌模式的 objects
+        <span data-translation="origin">( Inline mode objects )</span>
+        <span data-translation="zh" hidden>( 內嵌模式的 objects )</span>
+    </h4>
+    <p>
+        <span data-translation="origin" hidden>
+            Objects and methods used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.
+        </span>
+        <span data-translation="zh">
+            內嵌模式使用的 objects 和 methods 在 <a href="#inline-mode">內嵌模式部分</a> 中介紹。
+        </span>
+    </p>
     <h3>
         <a class="anchor" name="available-methods" href="#available-methods"><i class="anchor-icon"></i></a>
         可用的方法
@@ -1904,7 +2320,7 @@ To learn how to create…">
         </span>
         <span data-translation="zh">
             使用此方法去寄送文本訊息。
-            成功時，發送的 <a href="#message">Message</a> 會被回傳。
+            成功時會回傳 <a href="#message">Message</a>。
         </span>
     </p>
     <table class="table">
@@ -1939,7 +2355,7 @@ To learn how to create…">
                         Text of the message to be sent
                     </span>
                     <span data-translation="zh">
-                        被送出的訊息文本
+                        被發送的訊息文本
                     </span>
                 </td>
             </tr>
@@ -1953,25 +2369,59 @@ To learn how to create…">
                 <td>disable_web_page_preview</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Disables link previews for links in this message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Disables link previews for links in this message
+                    </span>
+                    <span data-translation="zh">
+                        對於訊息中的連結禁用連結預覽
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+                    </span>
+                    <span data-translation="zh">
+                        寄送 <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 的訊息。
+                        用戶將收到無聲的通知。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_to_message_id</td>
                 <td>Integer</td>
                 <td>Optional</td>
-                <td>If the message is a reply, ID of the original message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        If the message is a reply, ID of the original message
+                    </span>
+                    <span data-translation="zh">
+                        如果這是一則回覆訊息，則填上原始訊息的識別碼
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
                 <td>Optional</td>
-                <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+                    </span>
+                    <span data-translation="zh">
+                        附加的界面選項。
+                        對於 <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+                        、 <a href="https://core.telegram.org/bots#keyboards">客製化回覆鍵盤</a>
+                        、 移除回覆鍵盤命令
+                        及 強制用戶回覆命令
+                        的 JSON-serialized object。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -2016,7 +2466,7 @@ pre-formatted fixed-width code block
         </span>
         <span data-translation="zh">
             使用此方法轉發任何種類的訊息。
-            成功時，發送的 <a href="#message">Message</a> 會被回傳。
+            成功時會回傳 <a href="#message">Message</a>。
         </span>
     </p>
     <table class="table">
@@ -2094,7 +2544,7 @@ pre-formatted fixed-width code block
         </span>
         <span data-translation="zh">
             使用這個方法去發送圖片。
-            成功時會回傳 <a href="#message">Message</a> 。
+            成功時會回傳 <a href="#message">Message</a>。
         </span>
     </p>
     <table class="table">
@@ -2131,7 +2581,7 @@ pre-formatted fixed-width code block
                     <span data-translation="zh">
                         被發送的圖片。
                         傳遞 String 的 file_id 去發送已存在於 Telegram 服務器上的圖片（推薦），
-                        傳遞 String 的 HTTP 網址 讓 Telegram 從 Internet 上取得的圖片，
+                        傳遞 String 的 HTTP 網址讓 Telegram 從 Internet 上取得的圖片，
                         或者使用 multipart/form-data 上傳新的圖片。
                         <a href="#sending-files">有關發送 file 的更多信息 »</a>
                     </span>
@@ -2146,9 +2596,166 @@ pre-formatted fixed-width code block
                         Photo caption (may also be used when resending photos by <em>file_id</em>), 0-200 characters
                     </span>
                     <span data-translation="zh">
-                        圖片標題（也能使用在以 <em>file_id</em> 發送圖片時），
+                        圖片說明（也能使用在以 <em>file_id</em> 發送圖片時），
                         0-200 字符
                     </span>
+                </td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+                </tr>
+            <tr>
+            <tr>
+                <td>disable_notification</td>
+                <td>Boolean</td>
+                <td>Optional</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+                    </span>
+                    <span data-translation="zh">
+                        寄送 <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 的訊息。
+                        用戶將收到無聲的通知。
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>reply_to_message_id</td>
+                <td>Integer</td>
+                <td>Optional</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        If the message is a reply, ID of the original message
+                    </span>
+                    <span data-translation="zh">
+                        如果這是一則回覆訊息，則填上原始訊息的識別碼
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>reply_markup</td>
+                <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
+                <td>Optional</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+                    </span>
+                    <span data-translation="zh">
+                        附加的界面選項。
+                        對於 <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+                        、 <a href="https://core.telegram.org/bots#keyboards">客製化回覆鍵盤</a>
+                        、 移除回覆鍵盤命令
+                        及 強制用戶回覆命令
+                        的 JSON-serialized object。
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4><a class="anchor" name="sendaudio" href="#sendaudio"><i class="anchor-icon"></i></a>sendAudio</h4>
+    <p>
+        <span data-translation="origin" hidden>
+            Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent <a href="#message">Message</a> is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.
+        </span>
+        <span data-translation="zh">
+            如果你希望 Telegram 客戶端在音樂播放器中顯示 audio 文件，請使用此方法發送它們。
+            你的 audio 必須為 .mp3 格式。
+            成功時回傳 <a href="#message">Message</a>。
+            目前可以發送最大 50 MB 的 audio 文件，這個限制在未來可能會改變。
+        </span>
+    </p>
+    <p>
+        <span data-translation="origin" hidden>
+            For sending voice messages, use the <a href="#sendvoice">sendVoice</a> method instead.
+        </span>
+        <span data-translation="zh">
+            要發送 voice messages，請使用 <a href="#sendvoice">sendVoice</a> 方法代替。
+        </span>
+    </p>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td><strong>Parameters</strong></td>
+                <td><strong>Type</strong></td>
+                <td><strong>Required</strong></td>
+                <td><strong>Description</strong></td>
+            </tr>
+            <tr>
+                <td>chat_id</td>
+                <td>Integer or String</td>
+                <td>Yes</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)
+                    </span>
+                    <span data-translation="zh">
+                        目標 chat 的唯一識別碼或者目標 channel
+                        <sup><a href="#interpreterNotes-003">[註3]</a></sup>
+                        的用戶名 （以 <code>@channelusername</code> 格式）
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>audio</td>
+                <td><a href="#inputfile">InputFile</a> or String</td>
+                <td>Yes</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>
+                    </span>
+                    <span data-translation="zh">
+                        被發送的 audio 文件。
+                        傳遞 String 的 file_id 去發送已存在於 Telegram 服務器上的 audio 文件（推薦），
+                        傳遞 String 的 HTTP 網址讓 Telegram 從 Internet 上取得的 audio 文件，
+                        或者使用 multipart/form-data 上傳新的 audio 文件。
+                        <a href="#sending-files">有關發送 file 的更多信息 »</a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>caption</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Audio caption, 0-200 characters
+                    </span>
+                    <span data-translation="zh">
+                        Audio 說明， 0-200 字符
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
+                <td>duration</td>
+                <td>Integer</td>
+                <td>Optional</td>
+                <td>Duration of the audio in seconds</td>
+            </tr>
+            <tr>
+                <td>performer</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>
+                    Performer
+                    <sup><a href="#interpreterNotes-005">[註5]</a></sup>
+                </td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>
+                    Track name
+                    <sup><a href="#interpreterNotes-005">[註5]</a></sup>
                 </td>
             </tr>
             <tr>
@@ -2169,80 +2776,32 @@ pre-formatted fixed-width code block
                 <td>reply_to_message_id</td>
                 <td>Integer</td>
                 <td>Optional</td>
-                <td>If the message is a reply, ID of the original message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        If the message is a reply, ID of the original message
+                    </span>
+                    <span data-translation="zh">
+                        如果這是一則回覆訊息，則填上原始訊息的識別碼
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
                 <td>Optional</td>
-                <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
-            </tr>
-        </tbody>
-    </table>
-    <h4><a class="anchor" name="sendaudio" href="#sendaudio"><i class="anchor-icon"></i></a>sendAudio</h4>
-    <p>Use this method to send audio files, if you want Telegram clients to display them in the music player. Your audio must be in the .mp3 format. On success, the sent <a href="#message">Message</a> is returned. Bots can currently send audio files of up to 50 MB in size, this limit may be changed in the future.</p>
-    <p>For sending voice messages, use the <a href="#sendvoice">sendVoice</a> method instead.</p>
-    <table class="table">
-        <tbody>
-            <tr>
-                <td><strong>Parameters</strong></td>
-                <td><strong>Type</strong></td>
-                <td><strong>Required</strong></td>
-                <td><strong>Description</strong></td>
-            </tr>
-            <tr>
-                <td>chat_id</td>
-                <td>Integer or String</td>
-                <td>Yes</td>
-                <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
-            </tr>
-            <tr>
-                <td>audio</td>
-                <td><a href="#inputfile">InputFile</a> or String</td>
-                <td>Yes</td>
-                <td>Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
-            </tr>
-            <tr>
-                <td>caption</td>
-                <td>String</td>
-                <td>Optional</td>
-                <td>Audio caption, 0-200 characters</td>
-            </tr>
-            <tr>
-                <td>duration</td>
-                <td>Integer</td>
-                <td>Optional</td>
-                <td>Duration of the audio in seconds</td>
-            </tr>
-            <tr>
-                <td>performer</td>
-                <td>String</td>
-                <td>Optional</td>
-                <td>Performer</td>
-            </tr>
-            <tr>
-                <td>title</td>
-                <td>String</td>
-                <td>Optional</td>
-                <td>Track name</td>
-            </tr>
-            <tr>
-                <td>disable_notification</td>
-                <td>Boolean</td>
-                <td>Optional</td>
-                <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
-            </tr>
-            <tr>
-                <td>reply_to_message_id</td>
-                <td>Integer</td>
-                <td>Optional</td>
-                <td>If the message is a reply, ID of the original message</td>
-            </tr>
-            <tr>
-                <td>reply_markup</td>
-                <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
-                <td>Optional</td>
-                <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+                    </span>
+                    <span data-translation="zh">
+                        附加的界面選項。
+                        對於 <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+                        、 <a href="https://core.telegram.org/bots#keyboards">客製化回覆鍵盤</a>
+                        、 移除回覆鍵盤命令
+                        及 強制用戶回覆命令
+                        的 JSON-serialized object。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -2273,6 +2832,12 @@ pre-formatted fixed-width code block
                 <td>String</td>
                 <td>Optional</td>
                 <td>Document caption (may also be used when resending documents by <em>file_id</em>), 0-200 characters</td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
             </tr>
             <tr>
                 <td>disable_notification</td>
@@ -2341,6 +2906,18 @@ pre-formatted fixed-width code block
                 <td>Video caption (may also be used when resending videos by <em>file_id</em>), 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
+                <td>supports_streaming</td>
+                <td>Boolean</td>
+                <td>Optional</td>
+                <td>Pass <em>True</em>, if the uploaded video is suitable for streaming</td>
+            </tr>
+            <tr>
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
@@ -2361,7 +2938,19 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <h4><a class="anchor" name="sendvoice" href="#sendvoice"><i class="anchor-icon"></i></a>sendVoice</h4>
-    <p>Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as <a href="#audio">Audio</a> or <a href="#document">Document</a>). On success, the sent <a href="#message">Message</a> is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            Use this method to send audio files, if you want Telegram clients to display the file as a playable voice message. For this to work, your audio must be in an .ogg file encoded with OPUS (other formats may be sent as <a href="#audio">Audio</a> or <a href="#document">Document</a>). On success, the sent <a href="#message">Message</a> is returned. Bots can currently send voice messages of up to 50 MB in size, this limit may be changed in the future.
+        </span>
+        <span data-translation="zh">
+            如果你希望 Telegram 客戶端將 audio 文件顯示為可播放的 voice message，請使用此方法發送它們。
+            為此，你的 audio 必須以 OPUS 編碼為 .ogg 文件（其他格式可能被作為
+            <a href="#audio">Audio</a>
+            或 <a href="#document">Document</a> 發送）。
+            成功時會回傳 <a href="#message">Message</a>。
+            目前可以發送最大 50 MB 的 audio 文件，這個限制在未來可能會改變。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -2374,19 +2963,52 @@ pre-formatted fixed-width code block
                 <td>chat_id</td>
                 <td>Integer or String</td>
                 <td>Yes</td>
-                <td>Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Unique identifier for the target chat or username of the target channel (in the format <code>@channelusername</code>)
+                    </span>
+                    <span data-translation="zh">
+                        目標 chat 的唯一識別碼或者目標 channel
+                        <sup><a href="#interpreterNotes-003">[註3]</a></sup>
+                        的用戶名 （以 <code>@channelusername</code> 格式）
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>voice</td>
                 <td><a href="#inputfile">InputFile</a> or String</td>
                 <td>Yes</td>
-                <td>Audio file to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a></td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Audio file to send. Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get an audio file from the Internet, or upload a new one using multipart/form-data. <a href="#sending-files">More info on Sending Files »</a>
+                    </span>
+                    <span data-translation="zh">
+                        被發送的 audio 文件。
+                        傳遞 String 的 file_id 去發送已存在於 Telegram 服務器上的 audio 文件（推薦），
+                        傳遞 String 的 HTTP 網址讓 Telegram 從 Internet 上取得的 audio 文件，
+                        或者使用 multipart/form-data 上傳新的 audio 文件。
+                        <a href="#sending-files">有關發送 file 的更多信息 »</a>
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>caption</td>
                 <td>String</td>
                 <td>Optional</td>
-                <td>Voice message caption, 0-200 characters</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Voice message caption, 0-200 characters
+                    </span>
+                    <span data-translation="zh">
+                        Voice message 說明， 0-200 字符
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
             </tr>
             <tr>
                 <td>duration</td>
@@ -2398,19 +3020,46 @@ pre-formatted fixed-width code block
                 <td>disable_notification</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.
+                    </span>
+                    <span data-translation="zh">
+                        寄送 <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a> 的訊息。
+                        用戶將收到無聲的通知。
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_to_message_id</td>
                 <td>Integer</td>
                 <td>Optional</td>
-                <td>If the message is a reply, ID of the original message</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        If the message is a reply, ID of the original message
+                    </span>
+                    <span data-translation="zh">
+                        如果這是一則回覆訊息，則填上原始訊息的識別碼
+                    </span>
+                </td>
             </tr>
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a> or <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a> or <a href="#replykeyboardremove">ReplyKeyboardRemove</a> or <a href="#forcereply">ForceReply</a></td>
                 <td>Optional</td>
-                <td>Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.</td>
+                <td>
+                    <span data-translation="origin" hidden>
+                        Additional interface options. A JSON-serialized object for an <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboard</a>, <a href="https://core.telegram.org/bots#keyboards">custom reply keyboard</a>, instructions to remove reply keyboard or to force a reply from the user.
+                    </span>
+                    <span data-translation="zh">
+                        附加的界面選項。
+                        對於 <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">內嵌鍵盤</a>
+                        、 <a href="https://core.telegram.org/bots#keyboards">客製化回覆鍵盤</a>
+                        、 移除回覆鍵盤命令
+                        及 強制用戶回覆命令
+                        的 JSON-serialized object。
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -3023,7 +3672,7 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <h4><a class="anchor" name="exportchatinvitelink" href="#exportchatinvitelink"><i class="anchor-icon"></i></a>exportChatInviteLink</h4>
-    <p>Use this method to export an invite link to a supergroup or a channel. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns exported invite link as <em>String</em> on success.</p>
+    <p>Use this method to generate a new invite link for a chat; any previously generated link is revoked. The bot must be an administrator in the chat for this to work and must have the appropriate admin rights. Returns the new invite link as <em>String</em> on success.</p>
     <table class="table">
         <tbody>
             <tr>
@@ -3326,7 +3975,7 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <h4><a class="anchor" name="answercallbackquery" href="#answercallbackquery"><i class="anchor-icon"></i></a>answerCallbackQuery</h4>
-    <p>Use this method to send answers to callback queries sent from <a href="../../bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, <em>True</em> is returned.</p>
+    <p>Use this method to send answers to callback queries sent from <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>. The answer will be displayed to the user as a notification at the top of the chat screen or as an alert. On success, <em>True</em> is returned.</p>
     <blockquote>
         <p>Alternatively, the user can be redirected to the specified Game URL. For this option to work, you must first create a game for your bot via <a href="https://t.me/botfather">@Botfather</a> and accept the terms. Otherwise, you may use links like <code>t.me/your_bot?start=XXXX</code> that open your bot with a parameter.</p>
     </blockquote>
@@ -3370,11 +4019,23 @@ pre-formatted fixed-width code block
             </tr>
         </tbody>
     </table>
-    <h4><a class="anchor" name="inline-mode-methods" href="#inline-mode-methods"><i class="anchor-icon"></i></a>Inline mode methods</h4>
-    <p>Methods and objects used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.</p>
+    <h4>
+        <a class="anchor" name="inline-mode-methods" href="#inline-mode-methods"><i class="anchor-icon"></i></a>
+        內嵌模式的方法
+        <span data-translation="origin">( Inline mode methods )</span>
+        <span data-translation="zh" hidden>( 內嵌模式的方法 )</span>
+    </h4>
+    <p>
+        <span data-translation="origin" hidden>
+            Methods and objects used in the inline mode are described in the <a href="#inline-mode">Inline mode section</a>.
+        </span>
+        <span data-translation="zh">
+            內嵌模式使用的 methods 和 objects 在 <a href="#inline-mode">內嵌模式部分</a> 中介紹。
+        </span>
+    </p>
     <h3><a class="anchor" name="updating-messages" href="#updating-messages"><i class="anchor-icon"></i></a>Updating messages</h3>
-    <p>The following methods allow you to change an existing message in the message history instead of sending a new one with a result of an action. This is most useful for messages with <a href="../../bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a> using callback queries, but can also help reduce clutter in conversations with regular chat bots.</p>
-    <p>Please note, that it is currently only possible to edit messages without <em>reply_markup</em> or with <a href="../../bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>.</p>
+    <p>The following methods allow you to change an existing message in the message history instead of sending a new one with a result of an action. This is most useful for messages with <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a> using callback queries, but can also help reduce clutter in conversations with regular chat bots.</p>
+    <p>Please note, that it is currently only possible to edit messages without <em>reply_markup</em> or with <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">inline keyboards</a>.</p>
     <h4><a class="anchor" name="editmessagetext" href="#editmessagetext"><i class="anchor-icon"></i></a>editMessageText</h4>
     <p>Use this method to edit text and <a href="#games">game</a> messages sent by the bot or via the bot (for <a href="#inline-mode">inline bots</a>). On success, if edited message is sent by the bot, the edited <a href="#message">Message</a> is returned, otherwise <em>True</em> is returned.</p>
     <table class="table">
@@ -3462,6 +4123,12 @@ pre-formatted fixed-width code block
                 <td>String</td>
                 <td>Optional</td>
                 <td>New caption of the message</td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td>Optional</td>
+                <td>Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
             </tr>
             <tr>
                 <td>reply_markup</td>
@@ -3868,11 +4535,41 @@ pre-formatted fixed-width code block
             </tr>
         </tbody>
     </table>
-    <h3><a class="anchor" name="inline-mode" href="#inline-mode"><i class="anchor-icon"></i></a>Inline mode</h3>
-    <p>The following methods and objects allow your bot to work in <a href="../../bots/inline">inline mode</a>.<br>Please see our <a href="../../bots/inline">Introduction to Inline bots</a> for more details.</p>
-    <p>To enable this option, send the <code>/setinline</code> command to <a href="https://t.me/botfather">@BotFather</a> and provide the placeholder text that the user will see in the input field after typing your bot’s name.</p>
+    <h3>
+        <a class="anchor" name="inline-mode" href="#inline-mode"><i class="anchor-icon"></i></a>
+        內嵌模式
+        <span data-translation="origin">( Inline mode )</span>
+        <span data-translation="zh" hidden>( 內嵌模式 )</span>
+    </h3>
+    <p>
+        <span data-translation="origin" hidden>
+            The following methods and objects allow your bot to work in <a href="https://core.telegram.org/bots/inline">inline mode</a>.<br>
+            Please see our <a href="https://core.telegram.org/bots/inline">Introduction to Inline bots</a> for more details.
+        </span>
+        <span data-translation="zh">
+            以下方法和 objects 允許你的 bot 在 <a href="https://core.telegram.org/bots/inline">內嵌模式</a> 工作。<br>
+            更多詳細信息請見我們的 <a href="https://core.telegram.org/bots/inline">內嵌 bots 簡介</a>。
+        </span>
+    </p>
+    <p>
+        <span data-translation="origin" hidden>
+            To enable this option, send the <code>/setinline</code> command to <a href="https://t.me/botfather">@BotFather</a> and provide the placeholder text that the user will see in the input field after typing your bot’s name.
+        </span>
+        <span data-translation="zh">
+            要啟用此選項， 發送 <code>/setinline</code> 命令到 <a href="https://t.me/botfather">@BotFather</a>
+            ，並且提供用戶在輸入 bot 的名稱後在輸入欄位中看到代替文字。
+        </span>
+    </p>
     <h4><a class="anchor" name="inlinequery" href="#inlinequery"><i class="anchor-icon"></i></a>InlineQuery</h4>
-    <p>This object represents an incoming inline query. When the user sends an empty query, your bot could return some default or trending results.</p>
+    <p>
+        <span data-translation="origin" hidden>
+            This object represents an incoming inline query. When the user sends an empty query, your bot could return some default or trending results.
+        </span>
+        <span data-translation="zh">
+            此 object 表示一個傳入的 inline query。
+            當用戶發送空查詢時，你的 bot 可能會返回一些預設或趨勢的結果。
+        </span>
+    </p>
     <table class="table">
         <tbody>
             <tr>
@@ -3957,7 +4654,7 @@ pre-formatted fixed-width code block
                 <td>switch_pm_parameter</td>
                 <td>String</td>
                 <td>Optional</td>
-                <td><a href="../../bots#deep-linking">Deep-linking</a> parameter for the /start message sent to the bot when user presses the switch button. 1-64 characters, only <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>_</code> and <code>-</code> are allowed.<br><br><em>Example:</em> An inline bot that sends YouTube videos can ask the user to connect the bot to their YouTube account to adapt search results accordingly. To do this, it displays a ‘Connect your YouTube account’ button above the results, or even before showing any. The user presses the button, switches to a private chat with the bot and, in doing so, passes a start parameter that instructs the bot to return an oauth link. Once done, the bot can offer a <a href="#inlinekeyboardmarkup"><em>switch_inline</em></a> button so that the user can easily return to the chat where they wanted to use the bot&#39;s inline capabilities.</td>
+                <td><a href="https://core.telegram.org/bots#deep-linking">Deep-linking</a> parameter for the /start message sent to the bot when user presses the switch button. 1-64 characters, only <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>_</code> and <code>-</code> are allowed.<br><br><em>Example:</em> An inline bot that sends YouTube videos can ask the user to connect the bot to their YouTube account to adapt search results accordingly. To do this, it displays a ‘Connect your YouTube account’ button above the results, or even before showing any. The user presses the button, switches to a private chat with the bot and, in doing so, passes a start parameter that instructs the bot to return an oauth link. Once done, the bot can offer a <a href="#inlinekeyboardmarkup"><em>switch_inline</em></a> button so that the user can easily return to the chat where they wanted to use the bot&#39;s inline capabilities.</td>
             </tr>
         </tbody>
     </table>
@@ -4017,7 +4714,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>url</td>
@@ -4106,9 +4803,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the photo to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4172,9 +4874,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the GIF file to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4238,9 +4945,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the MPEG-4 file to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4297,6 +5009,11 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the video to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>video_width</td>
                 <td>Integer</td>
                 <td><em>Optional</em>. Video width</td>
@@ -4319,7 +5036,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4363,6 +5080,11 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>performer</td>
                 <td>String</td>
                 <td><em>Optional</em>. Performer</td>
@@ -4375,7 +5097,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4420,6 +5142,11 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>voice_duration</td>
                 <td>Integer</td>
                 <td><em>Optional</em>. Recording duration in seconds</td>
@@ -4427,7 +5154,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4465,6 +5192,11 @@ pre-formatted fixed-width code block
                 <td>caption</td>
                 <td>String</td>
                 <td><em>Optional</em>. Caption of the document to be sent, 0-200 characters</td>
+            </tr>
+            <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
             </tr>
             <tr>
                 <td>document_url</td>
@@ -4551,7 +5283,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4623,7 +5355,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4685,7 +5417,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4737,7 +5469,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
         </tbody>
     </table>
@@ -4782,9 +5514,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the photo to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4828,9 +5565,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the GIF file to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4874,9 +5616,15 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the MPEG-4 file to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4912,7 +5660,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -4962,9 +5710,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the document to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5014,9 +5767,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption of the video to be sent, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5060,9 +5818,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5102,9 +5865,14 @@ pre-formatted fixed-width code block
                 <td><em>Optional</em>. Caption, 0-200 characters</td>
             </tr>
             <tr>
+                <td>parse_mode</td>
+                <td>String</td>
+                <td><em>Optional</em>. Send <a href="#markdown-style"><em>Markdown</em></a> or <a href="#html-style"><em>HTML</em></a>, if you want Telegram apps to show <a href="#formatting-options">bold, italic, fixed-width text or inline URLs</a> in the media caption.</td>
+            </tr>
+            <tr>
                 <td>reply_markup</td>
                 <td><a href="#inlinekeyboardmarkup">InlineKeyboardMarkup</a></td>
-                <td><em>Optional</em>. <a href="../../bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
+                <td><em>Optional</em>. <a href="https://core.telegram.org/bots#inline-keyboards-and-on-the-fly-updating">Inline keyboard</a> attached to the message</td>
             </tr>
             <tr>
                 <td>input_message_content</td>
@@ -5275,9 +6043,9 @@ pre-formatted fixed-width code block
             </tr>
         </tbody>
     </table>
-    <p><strong>Note:</strong> It is necessary to enable <a href="../../bots/inline#collecting-feedback">inline feednack</a> via <a href="https://t.me/botfather">@Botfather</a> in order to receive these objects in updates.</p>
+    <p><strong>Note:</strong> It is necessary to enable <a href="https://core.telegram.org/bots/inline#collecting-feedback">inline feedback</a> via <a href="https://t.me/botfather">@Botfather</a> in order to receive these objects in updates.</p>
     <h3><a class="anchor" name="payments" href="#payments"><i class="anchor-icon"></i></a>Payments</h3>
-    <p>Your bot can accept payments from Telegram users. Please see the <a href="../../bots/payments">introduction to payments</a> for more details on the process and how to set up payments for your bot. Please note that users will need Telegram v.4.0 or higher to use payments (released on May 18, 2017).</p>
+    <p>Your bot can accept payments from Telegram users. Please see the <a href="https://core.telegram.org/bots/payments">introduction to payments</a> for more details on the process and how to set up payments for your bot. Please note that users will need Telegram v.4.0 or higher to use payments (released on May 18, 2017).</p>
     <h4><a class="anchor" name="sendinvoice" href="#sendinvoice"><i class="anchor-icon"></i></a>sendInvoice</h4>
     <p>Use this method to send invoices. On success, the sent <a href="#message">Message</a> is returned.</p>
     <table class="table">
@@ -5328,7 +6096,7 @@ pre-formatted fixed-width code block
                 <td>currency</td>
                 <td>String</td>
                 <td>Yes</td>
-                <td>Three-letter ISO 4217 currency code, see <a href="../../bots/payments#supported-currencies">more on currencies</a></td>
+                <td>Three-letter ISO 4217 currency code, see <a href="https://core.telegram.org/bots/payments#supported-currencies">more on currencies</a></td>
             </tr>
             <tr>
                 <td>prices</td>
@@ -5382,13 +6150,25 @@ pre-formatted fixed-width code block
                 <td>need_email</td>
                 <td>Boolean</td>
                 <td>Optional</td>
-                <td>Pass <em>True</em>, if you require the user&#39;s email to complete the order</td>
+                <td>Pass <em>True</em>, if you require the user&#39;s email address to complete the order</td>
             </tr>
             <tr>
                 <td>need_shipping_address</td>
                 <td>Boolean</td>
                 <td>Optional</td>
                 <td>Pass <em>True</em>, if you require the user&#39;s shipping address to complete the order</td>
+            </tr>
+            <tr>
+                <td>send_phone_number_to_provider</td>
+                <td>Boolean</td>
+                <td>Optional</td>
+                <td>Pass <em>True</em>, if user&#39;s phone number should be sent to provider</td>
+            </tr>
+            <tr>
+                <td>send_email_to_provider</td>
+                <td>Boolean</td>
+                <td>Optional</td>
+                <td>Pass <em>True</em>, if user&#39;s email address should be sent to provider</td>
             </tr>
             <tr>
                 <td>is_flexible</td>
@@ -5499,7 +6279,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>amount</td>
                 <td>Integer</td>
-                <td>Price of the product in the <em>smallest units</em> of the <a href="../../bots/payments#supported-currencies">currency</a> (integer, <strong>not</strong> float/double). For example, for a price of <code>US$ 1.45</code> pass <code>amount = 145</code>. See the <em>exp</em> parameter in <a href="https://core.telegram.org/bots/payments/currencies.json">currencies.json</a>, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).</td>
+                <td>Price of the product in the <em>smallest units</em> of the <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> (integer, <strong>not</strong> float/double). For example, for a price of <code>US$ 1.45</code> pass <code>amount = 145</code>. See the <em>exp</em> parameter in <a href="https://core.telegram.org/bots/payments/currencies.json">currencies.json</a>, it shows the number of digits past the decimal point for each currency (2 for the majority of currencies).</td>
             </tr>
         </tbody>
     </table>
@@ -5530,7 +6310,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>currency</td>
                 <td>String</td>
-                <td>Three-letter ISO 4217 <a href="../../bots/payments#supported-currencies">currency</a> code</td>
+                <td>Three-letter ISO 4217 <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> code</td>
             </tr>
             <tr>
                 <td>total_amount</td>
@@ -5649,7 +6429,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>currency</td>
                 <td>String</td>
-                <td>Three-letter ISO 4217 <a href="../../bots/payments#supported-currencies">currency</a> code</td>
+                <td>Three-letter ISO 4217 <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> code</td>
             </tr>
             <tr>
                 <td>total_amount</td>
@@ -5736,7 +6516,7 @@ pre-formatted fixed-width code block
             <tr>
                 <td>currency</td>
                 <td>String</td>
-                <td>Three-letter ISO 4217 <a href="../../bots/payments#supported-currencies">currency</a> code</td>
+                <td>Three-letter ISO 4217 <a href="https://core.telegram.org/bots/payments#supported-currencies">currency</a> code</td>
             </tr>
             <tr>
                 <td>total_amount</td>
@@ -5770,7 +6550,7 @@ pre-formatted fixed-width code block
         <li>To make your game more attractive, you can upload a GIF animation that demostrates the game to the users via <a href="https://t.me/botfather">BotFather</a> (see <a href="https://t.me/gamebot?game=lumberjack">Lumberjack</a> for example).</li>
         <li>A game message will also display high scores for the current chat. Use <a href="#setgamescore">setGameScore</a> to post high scores to the chat with the game, add the <em>edit_message</em> parameter to automatically update the message with the current scoreboard.</li>
         <li>Use <a href="#getgamehighscores">getGameHighScores</a> to get data for in-game high score tables.</li>
-        <li>You can also add an extra <a href="../../bots/games#sharing-your-game-to-telegram-chats">sharing button</a> for users to share their best score to different chats.</li>
+        <li>You can also add an extra <a href="https://core.telegram.org/bots/games#sharing-your-game-to-telegram-chats">sharing button</a> for users to share their best score to different chats.</li>
         <li>For examples of what can be done using this new stuff, check the <a href="https://t.me/gamebot">@gamebot</a> and <a href="https://t.me/gamee">@gamee</a> bots.</li>
     </ul>
     <h4><a class="anchor" name="sendgame" href="#sendgame"><i class="anchor-icon"></i></a>sendGame</h4>
@@ -6014,7 +6794,7 @@ pre-formatted fixed-width code block
         </tbody>
     </table>
     <hr>
-    <p>And that‘s about all we’ve got for now.<br>If you&#39;ve got any questions, please check out our <a href="../../bots/faq"><strong>Bot FAQ »</strong></a></p>
+    <p>And that‘s about all we’ve got for now.<br>If you&#39;ve got any questions, please check out our <a href="https://core.telegram.org/bots/faq"><strong>Bot FAQ »</strong></a></p>
     <h3>
         <a class="anchor" name="interpreterNotes" href="#interpreterNotes"><i class="anchor-icon"></i></a>
         譯者註釋
@@ -6044,7 +6824,7 @@ pre-formatted fixed-width code block
         <a href="#sendmessage">sendMessage</a> 的 text 訊息中實際可見的部分。<br>
         譬如在 HTML 樣式下發送 <code>&lt;b&gt;bold&lt;/b&gt;</code>
         的訊息，實際可見的部分只有 “bold”，共佔 4 個字符。<br>
-        被允許送出的字數長度為 0 ~ 4096 個實際可見的字符長度，
+        被允許發送的字數長度為 0 ~ 4096 個實際可見的字符長度，
         若超過則請求會失敗，並回傳 “error_code” 欄位等於 400，
         “description” 欄位為 "Bad Request: message is too long" 的失敗訊息。
     </p>
@@ -6056,6 +6836,35 @@ pre-formatted fixed-width code block
         在 <a href="#sendmessage">sendMessage</a> 的 “chat_id” 欄位裡所表示的
         channel 實測對頻道或者群組皆有效。<br>
         目前還不清楚是否本文中所有 channel 都有頻道和群組兩種意思。
+    </p>
+    <h6>
+        <a class="anchor" name="interpreterNotes-004" href="#interpreterNotes-004"><i class="anchor-icon"></i></a>
+        註： 004 - 譯者的母語是中文。
+    </h6>
+    <p>
+        譯者當前程度無法讀懂該原文的字面意思，
+        但仍可以依部分理解的原文和經實測的從旁推敲出用譯者口語化的解釋。
+    </p>
+    <h6>
+        <a class="anchor" name="interpreterNotes-005" href="#interpreterNotes-005"><i class="anchor-icon"></i></a>
+        註： 005 - performer 和 title
+    </h6>
+    <p>
+        以字面意思理解 “performer”（演出者）、 “title”（標題）
+        原認為與 windows 系統
+        <code style="background: transparent; padding: 2px 3px; border: 1px #ccc solid;">文件 &gt; 內容 &gt; 詳細資料</code>
+        裡頭的 “參與演出者”、“標題” 欄位相同。
+        但實測上看不出填寫其欄位有任何作用。<br>
+        電報討論串： <a href="https://t.me/PublicGroupForzh/71374">Telegram 討論區 #71374</a>。
+    </p>
+    <h6>
+        <a class="anchor" name="interpreterNotes-006" href="#interpreterNotes-006"><i class="anchor-icon"></i></a>
+        註： 006 - vote 和 poll
+    </h6>
+    <p>
+        “vote” 譯作投票。<br>
+        “poll” 譯作意見調查。<br>
+        參考： <a href="https://www.quora.com/What-is-the-difference-between-vote-suffrage-poll-and-ballot">What is the difference between 'vote','suffrage','poll' and 'ballot'? - Quora</a>。
     </p>
 </div>
 

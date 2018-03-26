@@ -482,3 +482,77 @@ function getFullOffsetY(el) {
   }
   return offsetTop;
 }
+
+function redraw(el) {
+  el.offsetTop + 1;
+}
+
+function initRipple() {
+  if (!document.querySelectorAll) return;
+  var rippleTextFields = document.querySelectorAll('.textfield-item input.form-control');
+  for (var i = 0; i < rippleTextFields.length; i++) {
+    (function(rippleTextField) {
+      function onTextRippleStart(e) {
+        if (document.activeElement === rippleTextField) return;
+        var rect = rippleTextField.getBoundingClientRect();
+        if (e.type == 'touchstart') {
+          var clientX = e.targetTouches[0].clientX;
+        } else {
+          var clientX = e.clientX;
+        }
+        var ripple = rippleTextField.parentNode.querySelector('.textfield-item-underline');
+        var rippleX = (clientX - rect.left) / rippleTextField.offsetWidth * 100;
+        ripple.style.transition = 'none';
+        redraw(ripple);
+        ripple.style.left = rippleX + '%';
+        ripple.style.right = (100 - rippleX) + '%';
+        redraw(ripple);
+        ripple.style.left = '';
+        ripple.style.right = '';
+        ripple.style.transition = '';
+      }
+      rippleTextField.addEventListener('mousedown', onTextRippleStart);
+      rippleTextField.addEventListener('touchstart', onTextRippleStart);
+    })(rippleTextFields[i]);
+  }
+  var rippleHandlers = document.querySelectorAll('.ripple-handler');
+  for (var i = 0; i < rippleHandlers.length; i++) {
+    (function(rippleHandler) {
+      function onRippleStart(e) {
+        var rippleMask = rippleHandler.querySelector('.ripple-mask');
+        if (!rippleMask) return;
+        var rect = rippleMask.getBoundingClientRect();
+        if (e.type == 'touchstart') {
+          var clientX = e.targetTouches[0].clientX;
+          var clientY = e.targetTouches[0].clientY;
+        } else {
+          var clientX = e.clientX;
+          var clientY = e.clientY;
+        }
+        var rippleX = (clientX - rect.left) - rippleMask.offsetWidth / 2;
+        var rippleY = (clientY - rect.top) - rippleMask.offsetHeight / 2;
+        var ripple = rippleHandler.querySelector('.ripple');
+        ripple.style.transition = 'none';
+        redraw(ripple);
+        ripple.style.transform = 'translate3d(' + rippleX + 'px, ' + rippleY + 'px, 0) scale3d(0.2, 0.2, 1)';
+        ripple.style.opacity = 1;
+        redraw(ripple);
+        ripple.style.transform = 'translate3d(' + rippleX + 'px, ' + rippleY + 'px, 0) scale3d(1, 1, 1)';
+        ripple.style.transition = '';
+
+        function onRippleEnd(e) {
+          ripple.style.transitionDuration = '.2s';
+          ripple.style.opacity = 0;
+          document.removeEventListener('mouseup', onRippleEnd);
+          document.removeEventListener('touchend', onRippleEnd);
+          document.removeEventListener('touchcancel', onRippleEnd);
+        }
+        document.addEventListener('mouseup', onRippleEnd);
+        document.addEventListener('touchend', onRippleEnd);
+        document.addEventListener('touchcancel', onRippleEnd);
+      }
+      rippleHandler.addEventListener('mousedown', onRippleStart);
+      rippleHandler.addEventListener('touchstart', onRippleStart);
+    })(rippleHandlers[i]);
+  }
+}
